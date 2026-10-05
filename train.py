@@ -566,7 +566,10 @@ class Trainer:
         os.replace(tmp, path)
 
     def load_state(self, ck: dict) -> None:
-        """Restore weights, optimizer, counters, history and RNG (same architecture)."""
+        """Restore weights, optimizer, counters, history and RNG (same architecture).
+
+        Slim checkpoints (no "optimizer" key, see paper_study/pack_results.py) load for
+        evaluation and inspection; training on from them restarts the AdamW moments."""
         if ck.get("format") != CHECKPOINT_FORMAT:
             raise ValueError("not a transformer_lab checkpoint")
         if GPTConfig(**ck["model_config"]) != self.model_cfg:
@@ -574,7 +577,10 @@ class Trainer:
         if ck["data"]["fingerprint"] != self.data.fingerprint:
             raise ValueError(f"checkpoint was trained on different data/tokenizer ({ck['data']['dataset']})")
         self.model.load_state_dict(ck["model"])
-        self.opt.load_state_dict(ck["optimizer"])
+        if "optimizer" in ck:
+            self.opt.load_state_dict(ck["optimizer"])
+        else:
+            self.add_log("warn", "slim checkpoint: no optimizer state; training on restarts the AdamW moments")
         self.step, self.tokens = int(ck["step"]), int(ck["tokens"])
         self.train_seconds = float(ck.get("train_seconds", 0.0))
         for k, v in ck.get("history", {}).items():

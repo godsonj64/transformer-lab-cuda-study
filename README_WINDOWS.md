@@ -30,6 +30,7 @@ Double-click **`paper_study\run_windows.bat`**. Each run trains, saves its check
 - **Stop:** Ctrl+C in the window. The current update finishes, then it saves.
 - **Resume:** double-click `run_windows.bat` again. Finished runs are skipped and an interrupted run resumes from its last save.
 - **Some seeds only:** open a terminal in the folder and run, e.g., `paper_study\run_windows.bat --seeds 0 1`.
+- **Fresh clone:** the repository already holds the six finished runs (slim checkpoints in `paper_study\ckpt`, plus the `paper_study\done_*` markers), so the script has nothing left to do. To run the study again, delete `paper_study\ckpt` and `paper_study\done_*` first.
 
 When all runs finish, the script writes **`paper_study\results_<computer>_<time>.zip`**, about 70 MB per run. It holds:
 

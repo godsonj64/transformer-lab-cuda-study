@@ -200,3 +200,5 @@ These checks cover the exercised cases. They do not prove the absence of bugs.
 ## Disk
 
 `data/wikitext-103/` takes 542 MB (315 MB raw parquet files plus 252 MB of training tokens). A checkpoint takes about 195 MB: weights plus the two AdamW moment buffers. Only one is kept per `--save` path.
+
+The repository includes the six paper-study runs as **slim checkpoints** in `paper_study/ckpt/` (about 70 MB each): the float32 weights, configuration, tokenizer and full metric history, without the AdamW moments. They load in `evaluate_checkpoint.py`, `export_figures.py`, `paper_study/analyze.py`, `paper_study/final_probes.py` and the dashboard, but cannot continue a headless run. To retrain the study from scratch, delete `paper_study/ckpt/` and `paper_study/done_*` first.

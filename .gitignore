@@ -5,13 +5,15 @@ __pycache__/
 *.pyc
 
 # Large / regenerable artifacts
-paper_study/ckpt/
 *.pt
+*.pt.tmp
 data/**/*.bin
 paper_study/results_*.zip
 
-# Run markers (would make run_study.py skip runs on a fresh clone)
-paper_study/done_*
+# The six study runs ship as slim checkpoints (weights + history, no optimizer state),
+# together with their done_* markers; full checkpoints stay local.
+!paper_study/ckpt/*.pt
+paper_study/ckpt_full/
 
 # Editor / OS
 .vscode/

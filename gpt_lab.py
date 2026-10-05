@@ -133,8 +133,11 @@ def build(args: argparse.Namespace) -> tuple[Trainer, str | None, list[str]]:
     overrides = {k: getattr(args, k) for k in TRAIN_FLAGS}
     if resume is not None:
         ck = load_checkpoint(resume)
+        if args.headless and "optimizer" not in ck:
+            raise ValueError(f"{resume} is a slim checkpoint (no optimizer state) and cannot continue training; "
+                             "use --fresh --save NEW.pt for a new run")
         mcfg = GPTConfig(**ck["model_config"])
-        ignored = [f"--{k.replace('_', '-')}" for k in MODEL_FLAGS if getattr(args, k) is not None
+        ignored =[f"--{k.replace('_', '-')}" for k in MODEL_FLAGS if getattr(args, k) is not None
                    and getattr(args, k) != getattr(mcfg, k)]
         if ignored:
             notes.append(f"ignored for a resumed run (architecture is fixed): {', '.join(ignored)}")
