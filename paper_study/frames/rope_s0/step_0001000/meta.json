@@ -1,0 +1,8 @@
+{
+  "format": "transformer_lab_frame_v1",
+  "step": 1000,
+  "tokens": 8192000,
+  "captured_at": "2026-10-05T12:15:50",
+  "dataset": "wikitext-103",
+  "data_fingerprint": "15ec0fd6ef24da743d6f24821a7914b360e94c17cdc044743ae2c832bb0d7964"
+}

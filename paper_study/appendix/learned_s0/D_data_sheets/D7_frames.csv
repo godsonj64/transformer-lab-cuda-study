@@ -1,0 +1,7 @@
+update,tokens,last val loss,source
+500,4.1M,5.7125,captured
+"1,000",8.2M,5.1071,captured
+"1,500",12.3M,4.7671,captured
+"2,000",16.4M,4.5767,captured
+"2,500",20.5M,4.3994,captured
+"3,000",24.6M,4.2694,captured

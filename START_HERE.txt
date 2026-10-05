@@ -1,0 +1,6 @@
+Transformer Lab - CUDA study package
+
+1. Read README_WINDOWS.md
+2. Double-click paper_study\setup_windows.bat (once)
+3. Double-click paper_study\run_windows.bat
+4. Bring paper_study\results_*.zip back to the Mac

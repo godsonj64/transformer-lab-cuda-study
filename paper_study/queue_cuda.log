@@ -1,0 +1,638 @@
+model: 6 layers, 6 heads, d=384, context 512, 16.91M parameters (10.62M non-embedding) on cuda
+logs: paper_study\logs\rope_s0
+recording every 500 updates into paper_study\frames\rope_s0
+[eval] step 0: val loss 9.7680, ppl 17465.2, 3.247 bits/byte, word ppl 139538.0 (3.7 s)
+[eval] step 20: val loss 9.0925, ppl 8888.4, 3.023 bits/byte, word ppl 61508.3 (3.4 s)
+step 24/20,000  tokens 0.2M  epoch 0.002  loss 9.6202  lr 4.80e-05  |g| 1.82  31,707 tok/s  ETA 1.4 h
+[eval] step 40: val loss 8.5915, ppl 5385.8, 2.856 bits/byte, word ppl 33502.1 (3.5 s)
+[eval] step 60: val loss 7.8672, ppl 2610.1, 2.615 bits/byte, word ppl 13917.2 (3.5 s)
+step 60/20,000  tokens 0.5M  epoch 0.004  loss 9.0137  lr 1.20e-04  |g| 1.72  33,527 tok/s  ETA 1.4 h
+[eval] step 80: val loss 7.2577, ppl 1419.1, 2.413 bits/byte, word ppl 6646.4 (2.7 s)
+[eval] step 100: val loss 6.8677, ppl 960.8, 2.283 bits/byte, word ppl 4141.7 (2.7 s)
+step 100/20,000  tokens 0.8M  epoch 0.007  loss 8.0477  lr 2.00e-04  |g| 0.79  40,633 tok/s  ETA 1.1 h
+step 170/20,000  tokens 1.4M  epoch 0.011  loss 6.8488  lr 3.40e-04  |g| 1.16  39,465 tok/s  ETA 1.1 h
+[eval] step 200: val loss 6.0786, ppl 436.4, 2.021 bits/byte, word ppl 1590.4 (2.7 s)
+step 226/20,000  tokens 1.9M  epoch 0.015  loss 6.3465  lr 4.52e-04  |g| 0.83  40,713 tok/s  ETA 1.1 h
+step 293/20,000  tokens 2.4M  epoch 0.019  loss 6.0049  lr 5.86e-04  |g| 0.93  37,584 tok/s  ETA 1.2 h
+[eval] step 300: val loss 5.7601, ppl 317.4, 1.915 bits/byte, word ppl 1080.9 (3.0 s)
+step 345/20,000  tokens 2.8M  epoch 0.022  loss 5.8198  lr 6.90e-04  |g| 0.71  37,406 tok/s  ETA 1.2 h
+[eval] step 400: val loss 5.5136, ppl 248.0, 1.833 bits/byte, word ppl 801.6 (2.7 s)
+step 400/20,000  tokens 3.3M  epoch 0.026  loss 5.6650  lr 8.00e-04  |g| 0.74  39,947 tok/s  ETA 1.1 h
+step 470/20,000  tokens 3.9M  epoch 0.031  loss 5.5420  lr 9.40e-04  |g| 0.80  38,188 tok/s  ETA 1.2 h
+[eval] step 500: val loss 5.3451, ppl 209.6, 1.777 bits/byte, word ppl 653.4 (2.7 s)
+captured frame 1 at step 500 -> paper_study\frames\rope_s0\step_0000500
+step 525/20,000  tokens 4.3M  epoch 0.034  loss 5.4374  lr 1.00e-03  |g| 0.69  39,684 tok/s  ETA 1.1 h
+step 596/20,000  tokens 4.9M  epoch 0.039  loss 5.3149  lr 1.00e-03  |g| 0.60  39,780 tok/s  ETA 1.1 h
+[eval] step 600: val loss 5.1740, ppl 176.6, 1.720 bits/byte, word ppl 531.0 (2.7 s)
+step 652/20,000  tokens 5.3M  epoch 0.042  loss 5.2156  lr 1.00e-03  |g| 0.65  41,574 tok/s  ETA 1.1 h
+[eval] step 700: val loss 5.0419, ppl 154.8, 1.676 bits/byte, word ppl 452.4 (2.7 s)
+step 710/20,000  tokens 5.8M  epoch 0.046  loss 5.1527  lr 1.00e-03  |g| 0.60  36,816 tok/s  ETA 1.2 h
+step 779/20,000  tokens 6.4M  epoch 0.051  loss 5.0880  lr 1.00e-03  |g| 0.63  41,198 tok/s  ETA 1.1 h
+[eval] step 800: val loss 4.9386, ppl 139.6, 1.642 bits/byte, word ppl 399.1 (2.7 s)
+step 832/20,000  tokens 6.8M  epoch 0.054  loss 5.0179  lr 9.99e-04  |g| 0.61  39,292 tok/s  ETA 1.1 h
+step 896/20,000  tokens 7.3M  epoch 0.058  loss 4.9425  lr 9.99e-04  |g| 0.60  37,611 tok/s  ETA 1.2 h
+[eval] step 900: val loss 4.8280, ppl 125.0, 1.605 bits/byte, word ppl 349.0 (2.8 s)
+step 950/20,000  tokens 7.8M  epoch 0.062  loss 4.9083  lr 9.99e-04  |g| 0.64  38,955 tok/s  ETA 1.1 h
+[eval] step 1,000: val loss 4.7509, ppl 115.7, 1.579 bits/byte, word ppl 317.9 (2.7 s)
+captured frame 2 at step 1,000 -> paper_study\frames\rope_s0\step_0001000
+step 1,002/20,000  tokens 8.2M  epoch 0.065  loss 4.8635  lr 9.99e-04  |g| 0.61  41,642 tok/s  ETA 1.0 h
+step 1,071/20,000  tokens 8.8M  epoch 0.070  loss 4.8012  lr 9.98e-04  |g| 0.63  37,349 tok/s  ETA 1.2 h
+[eval] step 1,100: val loss 4.6742, ppl 107.1, 1.554 bits/byte, word ppl 289.6 (2.7 s)
+step 1,126/20,000  tokens 9.2M  epoch 0.073  loss 4.7409  lr 9.98e-04  |g| 0.59  40,096 tok/s  ETA 1.1 h
+step 1,195/20,000  tokens 9.8M  epoch 0.078  loss 4.6963  lr 9.97e-04  |g| 0.63  38,138 tok/s  ETA 1.1 h
+[eval] step 1,200: val loss 4.6057, ppl 100.1, 1.531 bits/byte, word ppl 266.6 (2.7 s)
+step 1,251/20,000  tokens 10.2M  epoch 0.081  loss 4.6555  lr 9.97e-04  |g| 0.63  38,724 tok/s  ETA 1.1 h
+[eval] step 1,300: val loss 4.5328, ppl 93.0, 1.507 bits/byte, word ppl 244.0 (2.7 s)
+step 1,308/20,000  tokens 10.7M  epoch 0.085  loss 4.6081  lr 9.96e-04  |g| 0.62  41,642 tok/s  ETA 1.0 h
+step 1,377/20,000  tokens 11.3M  epoch 0.090  loss 4.5802  lr 9.96e-04  |g| 0.61  40,623 tok/s  ETA 1.0 h
+[eval] step 1,400: val loss 4.4717, ppl 87.5, 1.486 bits/byte, word ppl 226.6 (2.7 s)
+step 1,433/20,000  tokens 11.7M  epoch 0.093  loss 4.5322  lr 9.95e-04  |g| 0.64  42,075 tok/s  ETA 1.0 h
+[eval] step 1,500: val loss 4.4213, ppl 83.2, 1.470 bits/byte, word ppl 213.1 (2.7 s)
+captured frame 3 at step 1,500 -> paper_study\frames\rope_s0\step_0001500
+step 1,500/20,000  tokens 12.3M  epoch 0.098  loss 4.5080  lr 9.94e-04  |g| 0.77  40,007 tok/s  ETA 1.1 h
+step 1,571/20,000  tokens 12.9M  epoch 0.102  loss 4.4732  lr 9.93e-04  |g| 0.61  37,932 tok/s  ETA 1.1 h
+[eval] step 1,600: val loss 4.3641, ppl 78.6, 1.451 bits/byte, word ppl 198.8 (2.7 s)
+step 1,628/20,000  tokens 13.3M  epoch 0.106  loss 4.4400  lr 9.93e-04  |g| 0.63  41,312 tok/s  ETA 1.0 h
+step 1,699/20,000  tokens 13.9M  epoch 0.111  loss 4.4245  lr 9.92e-04  |g| 0.66  40,230 tok/s  ETA 1.0 h
+[eval] step 1,700: val loss 4.3341, ppl 76.3, 1.441 bits/byte, word ppl 191.7 (2.8 s)
+step 1,752/20,000  tokens 14.4M  epoch 0.114  loss 4.3822  lr 9.91e-04  |g| 0.63  40,249 tok/s  ETA 1.0 h
+[eval] step 1,800: val loss 4.2889, ppl 72.9, 1.426 bits/byte, word ppl 181.5 (2.9 s)
+step 1,803/20,000  tokens 14.8M  epoch 0.117  loss 4.3707  lr 9.90e-04  |g| 0.63  39,800 tok/s  ETA 1.0 h
+step 1,869/20,000  tokens 15.3M  epoch 0.122  loss 4.3383  lr 9.89e-04  |g| 0.62  38,670 tok/s  ETA 1.1 h
+[eval] step 1,900: val loss 4.2616, ppl 70.9, 1.417 bits/byte, word ppl 175.6 (2.7 s)
+step 1,925/20,000  tokens 15.8M  epoch 0.125  loss 4.3274  lr 9.88e-04  |g| 0.62  38,499 tok/s  ETA 1.1 h
+step 1,996/20,000  tokens 16.4M  epoch 0.130  loss 4.2920  lr 9.87e-04  |g| 0.62  39,004 tok/s  ETA 1.1 h
+[eval] step 2,000: val loss 4.2255, ppl 68.4, 1.405 bits/byte, word ppl 168.1 (2.7 s)
+captured frame 4 at step 2,000 -> paper_study\frames\rope_s0\step_0002000
+step 2,050/20,000  tokens 16.8M  epoch 0.133  loss 4.2901  lr 9.86e-04  |g| 0.58  38,214 tok/s  ETA 1.1 h
+[eval] step 2,100: val loss 4.1995, ppl 66.7, 1.396 bits/byte, word ppl 162.9 (2.7 s)
+step 2,108/20,000  tokens 17.3M  epoch 0.137  loss 4.2771  lr 9.85e-04  |g| 0.62  42,159 tok/s  ETA 1.0 h
+step 2,178/20,000  tokens 17.8M  epoch 0.142  loss 4.2638  lr 9.84e-04  |g| 0.63  44,391 tok/s  ETA 0.9 h
+[eval] step 2,200: val loss 4.1802, ppl 65.4, 1.390 bits/byte, word ppl 159.1 (2.7 s)
+step 2,235/20,000  tokens 18.3M  epoch 0.145  loss 4.2408  lr 9.83e-04  |g| 0.60  37,708 tok/s  ETA 1.1 h
+[eval] step 2,300: val loss 4.1468, ppl 63.2, 1.378 bits/byte, word ppl 152.8 (2.7 s)
+step 2,300/20,000  tokens 18.8M  epoch 0.150  loss 4.2300  lr 9.81e-04  |g| 0.60  40,231 tok/s  ETA 1.0 h
+autosaved paper_study\ckpt\rope_s0.pt at step 2,312
+step 2,371/20,000  tokens 19.4M  epoch 0.154  loss 4.2039  lr 9.80e-04  |g| 0.64  37,642 tok/s  ETA 1.1 h
+[eval] step 2,400: val loss 4.1252, ppl 61.9, 1.371 bits/byte, word ppl 148.8 (2.7 s)
+step 2,428/20,000  tokens 19.9M  epoch 0.158  loss 4.1949  lr 9.78e-04  |g| 0.63  41,441 tok/s  ETA 1.0 h
+step 2,498/20,000  tokens 20.5M  epoch 0.163  loss 4.1654  lr 9.77e-04  |g| 0.65  41,961 tok/s  ETA 0.9 h
+[eval] step 2,500: val loss 4.1086, ppl 60.9, 1.366 bits/byte, word ppl 145.9 (2.7 s)
+captured frame 5 at step 2,500 -> paper_study\frames\rope_s0\step_0002500
+step 2,554/20,000  tokens 20.9M  epoch 0.166  loss 4.1706  lr 9.76e-04  |g| 0.61  41,339 tok/s  ETA 1.0 h
+[eval] step 2,600: val loss 4.0913, ppl 59.8, 1.360 bits/byte, word ppl 142.8 (2.7 s)
+step 2,612/20,000  tokens 21.4M  epoch 0.170  loss 4.1643  lr 9.74e-04  |g| 0.59  42,074 tok/s  ETA 0.9 h
+step 2,681/20,000  tokens 22.0M  epoch 0.174  loss 4.1589  lr 9.73e-04  |g| 0.62  36,003 tok/s  ETA 1.1 h
+[eval] step 2,700: val loss 4.0829, ppl 59.3, 1.357 bits/byte, word ppl 141.4 (2.7 s)
+step 2,739/20,000  tokens 22.4M  epoch 0.178  loss 4.1591  lr 9.71e-04  |g| 0.63  41,319 tok/s  ETA 1.0 h
+[eval] step 2,800: val loss 4.0593, ppl 57.9, 1.349 bits/byte, word ppl 137.4 (2.7 s)
+step 2,800/20,000  tokens 22.9M  epoch 0.182  loss 4.1434  lr 9.69e-04  |g| 0.61  39,871 tok/s  ETA 1.0 h
+step 2,870/20,000  tokens 23.5M  epoch 0.187  loss 4.0932  lr 9.68e-04  |g| 0.62  39,343 tok/s  ETA 1.0 h
+[eval] step 2,900: val loss 4.0382, ppl 56.7, 1.342 bits/byte, word ppl 133.9 (2.7 s)
+step 2,925/20,000  tokens 24.0M  epoch 0.190  loss 4.0969  lr 9.66e-04  |g| 0.64  39,176 tok/s  ETA 1.0 h
+step 2,996/20,000  tokens 24.5M  epoch 0.195  loss 4.0801  lr 9.64e-04  |g| 0.61  39,832 tok/s  ETA 1.0 h
+[eval] step 3,000: val loss 4.0268, ppl 56.1, 1.339 bits/byte, word ppl 132.1 (2.7 s)
+captured frame 6 at step 3,000 -> paper_study\frames\rope_s0\step_0003000
+saved paper_study\ckpt\rope_s0.pt (step 3,000, 24.6M tokens); continue with --resume paper_study\ckpt\rope_s0.pt
+stopped (token budget): step 3,000, 24.6M tokens (0.195 epochs), 10.5 min training; val loss 4.0268 (ppl 56.1, 1.339 bpb)
+  export   0% building A_data_cards
+  export  20% building B_curves
+  export  40% building C_maps
+  export  60% building D_data_sheets
+  export  80% building E_dashboard_frames
+  export 100% done
+appendix: paper_study\appendix\rope_s0\README.md
+paper_study\ckpt\rope_s0.pt: step 3,000, 24.6M training tokens, 16.91M parameters; context 512, stride 256
+  validation loss 3.9524 nats/token · ppl 52.06 · 1.3138 bits/byte · word ppl 120.69 · top-1 32.88% · top-5 53.30% · ECE 0.0098 (263,950 tokens, 5.4 s)
+  test       loss 3.9391 nats/token · ppl 51.37 · 1.3297 bits/byte · word ppl 126.25 · top-1 33.39% · top-5 53.59% · ECE 0.0128 (301,623 tokens, 5.9 s)
+  references on validation: unigram 7.2869, bigram 5.0957 nats/token
+wrote paper_study\eval\rope_s0\summary.json
+model: 6 layers, 6 heads, d=384, context 512, 17.11M parameters (10.62M non-embedding) on cuda
+logs: paper_study\logs\learned_s0
+recording every 500 updates into paper_study\frames\learned_s0
+[eval] step 0: val loss 9.7459, ppl 17083.5, 3.240 bits/byte, word ppl 135848.5 (3.1 s)
+[eval] step 20: val loss 9.0473, ppl 8495.6, 3.007 bits/byte, word ppl 58227.3 (2.7 s)
+step 31/20,000  tokens 0.3M  epoch 0.002  loss 9.5037  lr 6.20e-05  |g| 1.72  36,104 tok/s  ETA 1.3 h
+[eval] step 40: val loss 8.6013, ppl 5438.5, 2.859 bits/byte, word ppl 33900.1 (2.6 s)
+[eval] step 60: val loss 7.8717, ppl 2621.9, 2.617 bits/byte, word ppl 13993.6 (2.7 s)
+step 79/20,000  tokens 0.6M  epoch 0.005  loss 8.5492  lr 1.58e-04  |g| 1.15  44,726 tok/s  ETA 1.0 h
+[eval] step 80: val loss 7.2810, ppl 1452.5, 2.420 bits/byte, word ppl 6836.8 (2.7 s)
+[eval] step 100: val loss 6.9471, ppl 1040.1, 2.309 bits/byte, word ppl 4560.0 (2.5 s)
+step 126/20,000  tokens 1.0M  epoch 0.008  loss 7.5690  lr 2.52e-04  |g| 0.70  44,715 tok/s  ETA 1.0 h
+step 199/20,000  tokens 1.6M  epoch 0.013  loss 6.7066  lr 3.98e-04  |g| 0.66  44,794 tok/s  ETA 1.0 h
+[eval] step 200: val loss 6.2664, ppl 526.6, 2.083 bits/byte, word ppl 1997.4 (2.6 s)
+step 257/20,000  tokens 2.1M  epoch 0.017  loss 6.3639  lr 5.14e-04  |g| 0.69  43,307 tok/s  ETA 1.0 h
+[eval] step 300: val loss 6.0184, ppl 410.9, 2.001 bits/byte, word ppl 1478.6 (2.6 s)
+step 315/20,000  tokens 2.6M  epoch 0.020  loss 6.1329  lr 6.30e-04  |g| 0.70  39,078 tok/s  ETA 1.1 h
+step 386/20,000  tokens 3.2M  epoch 0.025  loss 5.9652  lr 7.72e-04  |g| 0.65  38,978 tok/s  ETA 1.1 h
+[eval] step 400: val loss 5.8244, ppl 338.5, 1.936 bits/byte, word ppl 1168.6 (2.6 s)
+step 445/20,000  tokens 3.6M  epoch 0.029  loss 5.8950  lr 8.90e-04  |g| 1.03  40,118 tok/s  ETA 1.1 h
+[eval] step 500: val loss 5.7125, ppl 302.6, 1.899 bits/byte, word ppl 1020.3 (2.6 s)
+captured frame 1 at step 500 -> paper_study\frames\learned_s0\step_0000500
+step 501/20,000  tokens 4.1M  epoch 0.033  loss 5.8169  lr 1.00e-03  |g| 0.66  39,605 tok/s  ETA 1.1 h
+step 572/20,000  tokens 4.7M  epoch 0.037  loss 5.7262  lr 1.00e-03  |g| 0.57  42,471 tok/s  ETA 1.0 h
+[eval] step 600: val loss 5.5739, ppl 263.5, 1.853 bits/byte, word ppl 862.5 (2.6 s)
+step 629/20,000  tokens 5.2M  epoch 0.041  loss 5.6515  lr 1.00e-03  |g| 0.54  42,593 tok/s  ETA 1.0 h
+[eval] step 700: val loss 5.4623, ppl 235.6, 1.816 bits/byte, word ppl 753.2 (2.7 s)
+step 700/20,000  tokens 5.7M  epoch 0.046  loss 5.5528  lr 1.00e-03  |g| 0.59  39,869 tok/s  ETA 1.1 h
+step 772/20,000  tokens 6.3M  epoch 0.050  loss 5.4847  lr 1.00e-03  |g| 0.60  43,163 tok/s  ETA 1.0 h
+[eval] step 800: val loss 5.3341, ppl 207.3, 1.773 bits/byte, word ppl 644.8 (2.6 s)
+step 830/20,000  tokens 6.8M  epoch 0.054  loss 5.4076  lr 9.99e-04  |g| 0.60  35,919 tok/s  ETA 1.2 h
+[eval] step 900: val loss 5.2051, ppl 182.2, 1.730 bits/byte, word ppl 551.4 (2.6 s)
+step 900/20,000  tokens 7.4M  epoch 0.059  loss 5.3222  lr 9.99e-04  |g| 0.60  40,363 tok/s  ETA 1.1 h
+step 972/20,000  tokens 8.0M  epoch 0.063  loss 5.2539  lr 9.99e-04  |g| 0.59  42,322 tok/s  ETA 1.0 h
+[eval] step 1,000: val loss 5.1071, ppl 165.2, 1.698 bits/byte, word ppl 489.6 (2.6 s)
+captured frame 2 at step 1,000 -> paper_study\frames\learned_s0\step_0001000
+step 1,026/20,000  tokens 8.4M  epoch 0.067  loss 5.1973  lr 9.98e-04  |g| 0.69  43,312 tok/s  ETA 1.0 h
+step 1,097/20,000  tokens 9.0M  epoch 0.071  loss 5.1155  lr 9.98e-04  |g| 0.64  41,653 tok/s  ETA 1.0 h
+[eval] step 1,100: val loss 5.0195, ppl 151.3, 1.669 bits/byte, word ppl 440.3 (2.6 s)
+step 1,155/20,000  tokens 9.5M  epoch 0.075  loss 5.0735  lr 9.98e-04  |g| 0.69  35,263 tok/s  ETA 1.2 h
+[eval] step 1,200: val loss 4.9410, ppl 139.9, 1.642 bits/byte, word ppl 400.3 (2.6 s)
+step 1,213/20,000  tokens 9.9M  epoch 0.079  loss 5.0164  lr 9.97e-04  |g| 0.65  43,193 tok/s  ETA 1.0 h
+step 1,285/20,000  tokens 10.5M  epoch 0.084  loss 4.9633  lr 9.96e-04  |g| 0.69  38,626 tok/s  ETA 1.1 h
+[eval] step 1,300: val loss 4.8804, ppl 131.7, 1.622 bits/byte, word ppl 371.9 (2.6 s)
+step 1,344/20,000  tokens 11.0M  epoch 0.087  loss 4.9390  lr 9.96e-04  |g| 0.67  42,527 tok/s  ETA 1.0 h
+[eval] step 1,400: val loss 4.8201, ppl 124.0, 1.602 bits/byte, word ppl 345.7 (2.6 s)
+step 1,403/20,000  tokens 11.5M  epoch 0.091  loss 4.9032  lr 9.95e-04  |g| 0.70  44,855 tok/s  ETA 0.9 h
+step 1,475/20,000  tokens 12.1M  epoch 0.096  loss 4.8743  lr 9.94e-04  |g| 0.67  42,486 tok/s  ETA 1.0 h
+[eval] step 1,500: val loss 4.7671, ppl 117.6, 1.585 bits/byte, word ppl 324.2 (2.6 s)
+captured frame 3 at step 1,500 -> paper_study\frames\learned_s0\step_0001500
+step 1,536/20,000  tokens 12.6M  epoch 0.100  loss 4.8260  lr 9.94e-04  |g| 0.78  37,930 tok/s  ETA 1.1 h
+[eval] step 1,600: val loss 4.7170, ppl 111.8, 1.568 bits/byte, word ppl 305.1 (2.5 s)
+step 1,600/20,000  tokens 13.1M  epoch 0.104  loss 4.8018  lr 9.93e-04  |g| 0.67  44,848 tok/s  ETA 0.9 h
+step 1,674/20,000  tokens 13.7M  epoch 0.109  loss 4.7804  lr 9.92e-04  |g| 0.71  44,200 tok/s  ETA 0.9 h
+[eval] step 1,700: val loss 4.6792, ppl 107.7, 1.555 bits/byte, word ppl 291.4 (2.6 s)
+step 1,733/20,000  tokens 14.2M  epoch 0.113  loss 4.7545  lr 9.91e-04  |g| 0.69  44,521 tok/s  ETA 0.9 h
+[eval] step 1,800: val loss 4.6387, ppl 103.4, 1.542 bits/byte, word ppl 277.4 (2.5 s)
+step 1,800/20,000  tokens 14.7M  epoch 0.117  loss 4.7213  lr 9.90e-04  |g| 0.70  43,576 tok/s  ETA 1.0 h
+step 1,874/20,000  tokens 15.4M  epoch 0.122  loss 4.6748  lr 9.89e-04  |g| 0.65  44,542 tok/s  ETA 0.9 h
+[eval] step 1,900: val loss 4.6073, ppl 100.2, 1.532 bits/byte, word ppl 267.1 (2.5 s)
+step 1,933/20,000  tokens 15.8M  epoch 0.126  loss 4.6688  lr 9.88e-04  |g| 0.69  44,697 tok/s  ETA 0.9 h
+[eval] step 2,000: val loss 4.5767, ppl 97.2, 1.521 bits/byte, word ppl 257.3 (2.6 s)
+captured frame 4 at step 2,000 -> paper_study\frames\learned_s0\step_0002000
+step 2,000/20,000  tokens 16.4M  epoch 0.130  loss 4.6403  lr 9.87e-04  |g| 0.71  43,947 tok/s  ETA 0.9 h
+step 2,075/20,000  tokens 17.0M  epoch 0.135  loss 4.6363  lr 9.86e-04  |g| 0.71  43,453 tok/s  ETA 0.9 h
+[eval] step 2,100: val loss 4.5343, ppl 93.2, 1.507 bits/byte, word ppl 244.4 (2.5 s)
+step 2,137/20,000  tokens 17.5M  epoch 0.139  loss 4.6018  lr 9.84e-04  |g| 0.72  40,278 tok/s  ETA 1.0 h
+[eval] step 2,200: val loss 4.5099, ppl 90.9, 1.499 bits/byte, word ppl 237.3 (2.5 s)
+step 2,200/20,000  tokens 18.0M  epoch 0.143  loss 4.5825  lr 9.83e-04  |g| 0.69  44,025 tok/s  ETA 0.9 h
+step 2,275/20,000  tokens 18.6M  epoch 0.148  loss 4.5634  lr 9.82e-04  |g| 0.66  44,381 tok/s  ETA 0.9 h
+[eval] step 2,300: val loss 4.4636, ppl 86.8, 1.484 bits/byte, word ppl 224.3 (2.5 s)
+step 2,337/20,000  tokens 19.1M  epoch 0.152  loss 4.5521  lr 9.80e-04  |g| 0.70  42,684 tok/s  ETA 0.9 h
+[eval] step 2,400: val loss 4.4364, ppl 84.5, 1.475 bits/byte, word ppl 217.1 (2.5 s)
+step 2,400/20,000  tokens 19.7M  epoch 0.156  loss 4.5224  lr 9.79e-04  |g| 0.78  44,271 tok/s  ETA 0.9 h
+autosaved paper_study\ckpt\learned_s0.pt at step 2,471
+step 2,474/20,000  tokens 20.3M  epoch 0.161  loss 4.4867  lr 9.77e-04  |g| 0.73  45,678 tok/s  ETA 0.9 h
+[eval] step 2,500: val loss 4.3994, ppl 81.4, 1.462 bits/byte, word ppl 207.6 (2.5 s)
+captured frame 5 at step 2,500 -> paper_study\frames\learned_s0\step_0002500
+step 2,533/20,000  tokens 20.8M  epoch 0.165  loss 4.4846  lr 9.76e-04  |g| 0.74  44,983 tok/s  ETA 0.9 h
+[eval] step 2,600: val loss 4.3667, ppl 78.8, 1.452 bits/byte, word ppl 199.5 (2.5 s)
+step 2,600/20,000  tokens 21.3M  epoch 0.169  loss 4.4410  lr 9.75e-04  |g| 0.70  45,022 tok/s  ETA 0.9 h
+step 2,674/20,000  tokens 21.9M  epoch 0.174  loss 4.4382  lr 9.73e-04  |g| 0.85  45,133 tok/s  ETA 0.9 h
+[eval] step 2,700: val loss 4.3517, ppl 77.6, 1.447 bits/byte, word ppl 195.9 (2.5 s)
+step 2,734/20,000  tokens 22.4M  epoch 0.178  loss 4.4243  lr 9.71e-04  |g| 0.78  45,292 tok/s  ETA 0.9 h
+[eval] step 2,800: val loss 4.3187, ppl 75.1, 1.436 bits/byte, word ppl 188.2 (2.5 s)
+step 2,800/20,000  tokens 22.9M  epoch 0.182  loss 4.4111  lr 9.69e-04  |g| 0.72  45,186 tok/s  ETA 0.9 h
+step 2,875/20,000  tokens 23.6M  epoch 0.187  loss 4.3481  lr 9.67e-04  |g| 0.77  45,044 tok/s  ETA 0.9 h
+[eval] step 2,900: val loss 4.2879, ppl 72.8, 1.425 bits/byte, word ppl 181.3 (2.5 s)
+step 2,936/20,000  tokens 24.1M  epoch 0.191  loss 4.3379  lr 9.66e-04  |g| 0.86  38,545 tok/s  ETA 1.0 h
+step 2,973/20,000  tokens 24.4M  epoch 0.193  loss 4.3491  lr 9.65e-04  |g| 0.83  14 tok/s  ETA 2691.6 h
+autosaved paper_study\ckpt\learned_s0.pt at step 2,973
+[eval] step 3,000: val loss 4.2694, ppl 71.5, 1.419 bits/byte, word ppl 177.3 (2.5 s)
+captured frame 6 at step 3,000 -> paper_study\frames\learned_s0\step_0003000
+saved paper_study\ckpt\learned_s0.pt (step 3,000, 24.6M tokens); continue with --resume paper_study\ckpt\learned_s0.pt
+stopped (token budget): step 3,000, 24.6M tokens (0.195 epochs), 19.3 min training; val loss 4.2694 (ppl 71.5, 1.419 bpb)
+  export   0% building A_data_cards
+  export  20% building B_curves
+  export  40% building C_maps
+  export  60% building D_data_sheets
+  export  80% building E_dashboard_frames
+  export 100% done
+appendix: paper_study\appendix\learned_s0\README.md
+paper_study\ckpt\learned_s0.pt: step 3,000, 24.6M training tokens, 17.11M parameters; context 512, stride 256
+  validation loss 4.2167 nats/token · ppl 67.81 · 1.4017 bits/byte · word ppl 166.30 · top-1 29.42% · top-5 49.89% · ECE 0.0104 (263,950 tokens, 5.0 s)
+  test       loss 4.2087 nats/token · ppl 67.27 · 1.4207 bits/byte · word ppl 175.82 · top-1 29.87% · top-5 50.17% · ECE 0.0131 (301,623 tokens, 5.6 s)
+  references on validation: unigram 7.2869, bigram 5.0957 nats/token
+wrote paper_study\eval\learned_s0\summary.json
+model: 6 layers, 6 heads, d=384, context 512, 16.91M parameters (10.62M non-embedding) on cuda
+logs: paper_study\logs\rope_s1
+recording every 500 updates into paper_study\frames\rope_s1
+[eval] step 0: val loss 9.7407, ppl 16995.9, 3.238 bits/byte, word ppl 135004.0 (2.8 s)
+[eval] step 20: val loss 9.0255, ppl 8312.1, 3.000 bits/byte, word ppl 56705.9 (2.6 s)
+[eval] step 40: val loss 8.5576, ppl 5206.4, 2.845 bits/byte, word ppl 32153.7 (2.6 s)
+step 40/20,000  tokens 0.3M  epoch 0.003  loss 9.3529  lr 8.00e-05  |g| 1.72  40,813 tok/s  ETA 1.1 h
+[eval] step 60: val loss 7.8296, ppl 2513.9, 2.603 bits/byte, word ppl 13297.8 (2.6 s)
+[eval] step 80: val loss 7.2454, ppl 1401.7, 2.409 bits/byte, word ppl 6547.9 (2.7 s)
+step 87/20,000  tokens 0.7M  epoch 0.006  loss 8.3238  lr 1.74e-04  |g| 0.96  40,966 tok/s  ETA 1.1 h
+[eval] step 100: val loss 6.8788, ppl 971.5, 2.287 bits/byte, word ppl 4197.8 (2.6 s)
+step 146/20,000  tokens 1.2M  epoch 0.010  loss 7.1733  lr 2.92e-04  |g| 0.71  40,788 tok/s  ETA 1.1 h
+[eval] step 200: val loss 6.0768, ppl 435.6, 2.020 bits/byte, word ppl 1587.1 (2.6 s)
+step 204/20,000  tokens 1.7M  epoch 0.013  loss 6.5189  lr 4.08e-04  |g| 0.80  42,916 tok/s  ETA 1.0 h
+step 275/20,000  tokens 2.3M  epoch 0.018  loss 6.0921  lr 5.50e-04  |g| 0.88  41,895 tok/s  ETA 1.1 h
+[eval] step 300: val loss 5.7598, ppl 317.3, 1.915 bits/byte, word ppl 1080.5 (2.6 s)
+step 335/20,000  tokens 2.7M  epoch 0.022  loss 5.8671  lr 6.70e-04  |g| 0.72  39,225 tok/s  ETA 1.1 h
+[eval] step 400: val loss 5.5101, ppl 247.2, 1.832 bits/byte, word ppl 798.2 (2.6 s)
+step 400/20,000  tokens 3.3M  epoch 0.026  loss 5.6882  lr 8.00e-04  |g| 0.71  41,750 tok/s  ETA 1.1 h
+step 472/20,000  tokens 3.9M  epoch 0.031  loss 5.5306  lr 9.44e-04  |g| 0.71  42,682 tok/s  ETA 1.0 h
+[eval] step 500: val loss 5.3182, ppl 204.0, 1.768 bits/byte, word ppl 632.4 (2.6 s)
+captured frame 1 at step 500 -> paper_study\frames\rope_s1\step_0000500
+step 529/20,000  tokens 4.3M  epoch 0.034  loss 5.4339  lr 1.00e-03  |g| 0.63  42,991 tok/s  ETA 1.0 h
+[eval] step 600: val loss 5.1889, ppl 179.3, 1.725 bits/byte, word ppl 540.7 (2.6 s)
+step 600/20,000  tokens 4.9M  epoch 0.039  loss 5.3152  lr 1.00e-03  |g| 0.61  42,108 tok/s  ETA 1.0 h
+step 673/20,000  tokens 5.5M  epoch 0.044  loss 5.1973  lr 1.00e-03  |g| 0.62  42,434 tok/s  ETA 1.0 h
+[eval] step 700: val loss 5.0284, ppl 152.7, 1.672 bits/byte, word ppl 445.0 (2.7 s)
+step 730/20,000  tokens 6.0M  epoch 0.048  loss 5.1164  lr 1.00e-03  |g| 0.60  36,295 tok/s  ETA 1.2 h
+[eval] step 800: val loss 4.9220, ppl 137.3, 1.636 bits/byte, word ppl 391.2 (2.6 s)
+step 800/20,000  tokens 6.6M  epoch 0.052  loss 5.0378  lr 9.99e-04  |g| 0.63  42,339 tok/s  ETA 1.0 h
+step 873/20,000  tokens 7.2M  epoch 0.057  loss 4.9463  lr 9.99e-04  |g| 0.59  42,896 tok/s  ETA 1.0 h
+[eval] step 900: val loss 4.8248, ppl 124.6, 1.604 bits/byte, word ppl 347.7 (2.6 s)
+step 930/20,000  tokens 7.6M  epoch 0.061  loss 4.9182  lr 9.99e-04  |g| 0.60  37,602 tok/s  ETA 1.2 h
+[eval] step 1,000: val loss 4.7321, ppl 113.5, 1.573 bits/byte, word ppl 310.7 (2.6 s)
+captured frame 2 at step 1,000 -> paper_study\frames\rope_s1\step_0001000
+step 1,000/20,000  tokens 8.2M  epoch 0.065  loss 4.8573  lr 9.99e-04  |g| 0.60  41,334 tok/s  ETA 1.0 h
+step 1,072/20,000  tokens 8.8M  epoch 0.070  loss 4.7784  lr 9.98e-04  |g| 0.59  42,267 tok/s  ETA 1.0 h
+[eval] step 1,100: val loss 4.6436, ppl 103.9, 1.544 bits/byte, word ppl 279.1 (2.7 s)
+step 1,131/20,000  tokens 9.3M  epoch 0.074  loss 4.7263  lr 9.98e-04  |g| 0.64  36,422 tok/s  ETA 1.2 h
+[eval] step 1,200: val loss 4.5783, ppl 97.3, 1.522 bits/byte, word ppl 257.8 (2.6 s)
+step 1,200/20,000  tokens 9.8M  epoch 0.078  loss 4.6811  lr 9.97e-04  |g| 0.65  41,267 tok/s  ETA 1.0 h
+step 1,273/20,000  tokens 10.4M  epoch 0.083  loss 4.6323  lr 9.97e-04  |g| 0.60  42,963 tok/s  ETA 1.0 h
+[eval] step 1,300: val loss 4.5132, ppl 91.2, 1.500 bits/byte, word ppl 238.3 (2.7 s)
+step 1,330/20,000  tokens 10.9M  epoch 0.087  loss 4.5758  lr 9.96e-04  |g| 0.61  36,922 tok/s  ETA 1.2 h
+[eval] step 1,400: val loss 4.4462, ppl 85.3, 1.478 bits/byte, word ppl 219.7 (2.7 s)
+step 1,400/20,000  tokens 11.5M  epoch 0.091  loss 4.5397  lr 9.95e-04  |g| 0.65  39,913 tok/s  ETA 1.1 h
+step 1,469/20,000  tokens 12.0M  epoch 0.096  loss 4.4861  lr 9.95e-04  |g| 0.58  38,834 tok/s  ETA 1.1 h
+[eval] step 1,500: val loss 4.3983, ppl 81.3, 1.462 bits/byte, word ppl 207.3 (2.7 s)
+captured frame 3 at step 1,500 -> paper_study\frames\rope_s1\step_0001500
+step 1,525/20,000  tokens 12.5M  epoch 0.099  loss 4.4547  lr 9.94e-04  |g| 0.62  39,970 tok/s  ETA 1.1 h
+step 1,597/20,000  tokens 13.1M  epoch 0.104  loss 4.4242  lr 9.93e-04  |g| 0.60  41,407 tok/s  ETA 1.0 h
+[eval] step 1,600: val loss 4.3462, ppl 77.2, 1.445 bits/byte, word ppl 194.6 (2.6 s)
+step 1,655/20,000  tokens 13.6M  epoch 0.108  loss 4.4029  lr 9.92e-04  |g| 0.62  36,628 tok/s  ETA 1.1 h
+[eval] step 1,700: val loss 4.3060, ppl 74.1, 1.431 bits/byte, word ppl 185.3 (2.7 s)
+step 1,713/20,000  tokens 14.0M  epoch 0.111  loss 4.3748  lr 9.91e-04  |g| 0.66  42,641 tok/s  ETA 1.0 h
+step 1,784/20,000  tokens 14.6M  epoch 0.116  loss 4.3521  lr 9.90e-04  |g| 0.64  42,279 tok/s  ETA 1.0 h
+[eval] step 1,800: val loss 4.2736, ppl 71.8, 1.421 bits/byte, word ppl 178.2 (2.7 s)
+step 1,842/20,000  tokens 15.1M  epoch 0.120  loss 4.3292  lr 9.90e-04  |g| 0.61  42,608 tok/s  ETA 1.0 h
+[eval] step 1,900: val loss 4.2365, ppl 69.2, 1.408 bits/byte, word ppl 170.3 (2.7 s)
+step 1,900/20,000  tokens 15.6M  epoch 0.124  loss 4.3050  lr 9.89e-04  |g| 0.65  41,190 tok/s  ETA 1.0 h
+step 1,971/20,000  tokens 16.1M  epoch 0.128  loss 4.3143  lr 9.87e-04  |g| 0.63  36,981 tok/s  ETA 1.1 h
+[eval] step 2,000: val loss 4.2171, ppl 67.8, 1.402 bits/byte, word ppl 166.4 (2.7 s)
+captured frame 4 at step 2,000 -> paper_study\frames\rope_s1\step_0002000
+step 2,025/20,000  tokens 16.6M  epoch 0.132  loss 4.2824  lr 9.87e-04  |g| 0.61  40,774 tok/s  ETA 1.0 h
+step 2,097/20,000  tokens 17.2M  epoch 0.136  loss 4.2782  lr 9.85e-04  |g| 0.65  42,217 tok/s  ETA 1.0 h
+[eval] step 2,100: val loss 4.1927, ppl 66.2, 1.394 bits/byte, word ppl 161.5 (2.7 s)
+step 2,154/20,000  tokens 17.6M  epoch 0.140  loss 4.2401  lr 9.84e-04  |g| 0.62  42,733 tok/s  ETA 1.0 h
+[eval] step 2,200: val loss 4.1668, ppl 64.5, 1.385 bits/byte, word ppl 156.5 (2.7 s)
+step 2,212/20,000  tokens 18.1M  epoch 0.144  loss 4.2256  lr 9.83e-04  |g| 0.63  42,916 tok/s  ETA 0.9 h
+step 2,283/20,000  tokens 18.7M  epoch 0.149  loss 4.2054  lr 9.82e-04  |g| 0.65  42,610 tok/s  ETA 0.9 h
+[eval] step 2,300: val loss 4.1534, ppl 63.6, 1.381 bits/byte, word ppl 154.0 (2.7 s)
+step 2,341/20,000  tokens 19.2M  epoch 0.152  loss 4.1987  lr 9.80e-04  |g| 0.63  36,823 tok/s  ETA 1.1 h
+[eval] step 2,400: val loss 4.1442, ppl 63.1, 1.378 bits/byte, word ppl 152.3 (2.7 s)
+step 2,400/20,000  tokens 19.7M  epoch 0.156  loss 4.2044  lr 9.79e-04  |g| 0.61  40,422 tok/s  ETA 1.0 h
+autosaved paper_study\ckpt\rope_s1.pt at step 2,439
+step 2,470/20,000  tokens 20.2M  epoch 0.161  loss 4.1814  lr 9.78e-04  |g| 0.61  39,416 tok/s  ETA 1.0 h
+[eval] step 2,500: val loss 4.1131, ppl 61.1, 1.367 bits/byte, word ppl 146.7 (2.7 s)
+captured frame 5 at step 2,500 -> paper_study\frames\rope_s1\step_0002500
+step 2,527/20,000  tokens 20.7M  epoch 0.164  loss 4.1538  lr 9.76e-04  |g| 0.65  41,949 tok/s  ETA 0.9 h
+step 2,597/20,000  tokens 21.3M  epoch 0.169  loss 4.1419  lr 9.75e-04  |g| 0.63  41,473 tok/s  ETA 1.0 h
+[eval] step 2,600: val loss 4.0942, ppl 60.0, 1.361 bits/byte, word ppl 143.3 (2.7 s)
+step 2,653/20,000  tokens 21.7M  epoch 0.173  loss 4.1484  lr 9.73e-04  |g| 0.66  43,099 tok/s  ETA 0.9 h
+[eval] step 2,700: val loss 4.0816, ppl 59.2, 1.357 bits/byte, word ppl 141.2 (2.7 s)
+step 2,711/20,000  tokens 22.2M  epoch 0.176  loss 4.1329  lr 9.72e-04  |g| 0.65  37,055 tok/s  ETA 1.1 h
+step 2,778/20,000  tokens 22.8M  epoch 0.181  loss 4.1101  lr 9.70e-04  |g| 0.63  42,334 tok/s  ETA 0.9 h
+[eval] step 2,800: val loss 4.0587, ppl 57.9, 1.349 bits/byte, word ppl 137.3 (2.7 s)
+step 2,836/20,000  tokens 23.2M  epoch 0.185  loss 4.1226  lr 9.69e-04  |g| 0.62  38,900 tok/s  ETA 1.0 h
+[eval] step 2,900: val loss 4.0479, ppl 57.3, 1.346 bits/byte, word ppl 135.5 (2.7 s)
+step 2,900/20,000  tokens 23.8M  epoch 0.189  loss 4.1291  lr 9.67e-04  |g| 0.67  39,732 tok/s  ETA 1.0 h
+step 2,970/20,000  tokens 24.3M  epoch 0.193  loss 4.0995  lr 9.65e-04  |g| 0.66  38,718 tok/s  ETA 1.0 h
+[eval] step 3,000: val loss 4.0280, ppl 56.1, 1.339 bits/byte, word ppl 132.3 (2.7 s)
+captured frame 6 at step 3,000 -> paper_study\frames\rope_s1\step_0003000
+saved paper_study\ckpt\rope_s1.pt (step 3,000, 24.6M tokens); continue with --resume paper_study\ckpt\rope_s1.pt
+stopped (token budget): step 3,000, 24.6M tokens (0.195 epochs), 10.0 min training; val loss 4.0280 (ppl 56.1, 1.339 bpb)
+  export   0% building A_data_cards
+  export  20% building B_curves
+  export  40% building C_maps
+  export  60% building D_data_sheets
+  export  80% building E_dashboard_frames
+  export 100% done
+appendix: paper_study\appendix\rope_s1\README.md
+paper_study\ckpt\rope_s1.pt: step 3,000, 24.6M training tokens, 16.91M parameters; context 512, stride 256
+  validation loss 3.9527 nats/token · ppl 52.08 · 1.3139 bits/byte · word ppl 120.74 · top-1 32.72% · top-5 53.28% · ECE 0.0069 (263,950 tokens, 5.5 s)
+  test       loss 3.9402 nats/token · ppl 51.43 · 1.3300 bits/byte · word ppl 126.42 · top-1 33.38% · top-5 53.55% · ECE 0.0107 (301,623 tokens, 6.3 s)
+  references on validation: unigram 7.2869, bigram 5.0957 nats/token
+wrote paper_study\eval\rope_s1\summary.json
+model: 6 layers, 6 heads, d=384, context 512, 17.11M parameters (10.62M non-embedding) on cuda
+logs: paper_study\logs\learned_s1
+recording every 500 updates into paper_study\frames\learned_s1
+[eval] step 0: val loss 9.7700, ppl 17500.7, 3.248 bits/byte, word ppl 139882.2 (2.8 s)
+[eval] step 20: val loss 9.0360, ppl 8400.0, 3.004 bits/byte, word ppl 57433.7 (2.5 s)
+[eval] step 40: val loss 8.5840, ppl 5345.6, 2.853 bits/byte, word ppl 33199.0 (2.6 s)
+step 40/20,000  tokens 0.3M  epoch 0.003  loss 9.3678  lr 8.00e-05  |g| 1.76  43,756 tok/s  ETA 1.0 h
+[eval] step 60: val loss 7.8617, ppl 2595.8, 2.613 bits/byte, word ppl 13824.9 (2.6 s)
+[eval] step 80: val loss 7.2725, ppl 1440.2, 2.418 bits/byte, word ppl 6766.7 (2.6 s)
+step 88/20,000  tokens 0.7M  epoch 0.006  loss 8.3254  lr 1.76e-04  |g| 0.79  42,020 tok/s  ETA 1.1 h
+[eval] step 100: val loss 6.9414, ppl 1034.2, 2.307 bits/byte, word ppl 4528.8 (2.5 s)
+step 150/20,000  tokens 1.2M  epoch 0.010  loss 7.2113  lr 3.00e-04  |g| 0.75  44,586 tok/s  ETA 1.0 h
+[eval] step 200: val loss 6.2855, ppl 536.7, 2.089 bits/byte, word ppl 2044.2 (2.6 s)
+step 206/20,000  tokens 1.7M  epoch 0.013  loss 6.6593  lr 4.12e-04  |g| 0.77  36,999 tok/s  ETA 1.2 h
+step 276/20,000  tokens 2.3M  epoch 0.018  loss 6.2880  lr 5.52e-04  |g| 0.74  43,919 tok/s  ETA 1.0 h
+[eval] step 300: val loss 6.0073, ppl 406.4, 1.997 bits/byte, word ppl 1458.8 (2.5 s)
+step 336/20,000  tokens 2.8M  epoch 0.022  loss 6.0989  lr 6.72e-04  |g| 0.61  38,298 tok/s  ETA 1.2 h
+[eval] step 400: val loss 5.8320, ppl 341.1, 1.939 bits/byte, word ppl 1179.4 (2.6 s)
+step 400/20,000  tokens 3.3M  epoch 0.026  loss 5.9658  lr 8.00e-04  |g| 0.67  44,351 tok/s  ETA 1.0 h
+step 472/20,000  tokens 3.9M  epoch 0.031  loss 5.8514  lr 9.44e-04  |g| 0.65  39,158 tok/s  ETA 1.1 h
+[eval] step 500: val loss 5.6944, ppl 297.2, 1.893 bits/byte, word ppl 998.1 (2.6 s)
+captured frame 1 at step 500 -> paper_study\frames\learned_s1\step_0000500
+step 530/20,000  tokens 4.3M  epoch 0.034  loss 5.7885  lr 1.00e-03  |g| 0.57  36,683 tok/s  ETA 1.2 h
+[eval] step 600: val loss 5.5796, ppl 265.0, 1.855 bits/byte, word ppl 868.4 (2.6 s)
+step 600/20,000  tokens 4.9M  epoch 0.039  loss 5.7054  lr 1.00e-03  |g| 0.57  43,235 tok/s  ETA 1.0 h
+step 672/20,000  tokens 5.5M  epoch 0.044  loss 5.5975  lr 1.00e-03  |g| 0.66  43,710 tok/s  ETA 1.0 h
+[eval] step 700: val loss 5.4289, ppl 227.9, 1.805 bits/byte, word ppl 723.4 (2.5 s)
+step 732/20,000  tokens 6.0M  epoch 0.048  loss 5.5136  lr 1.00e-03  |g| 0.73  45,237 tok/s  ETA 1.0 h
+[eval] step 800: val loss 5.3182, ppl 204.0, 1.768 bits/byte, word ppl 632.5 (2.5 s)
+step 800/20,000  tokens 6.6M  epoch 0.052  loss 5.4371  lr 9.99e-04  |g| 0.57  45,102 tok/s  ETA 1.0 h
+step 875/20,000  tokens 7.2M  epoch 0.057  loss 5.3407  lr 9.99e-04  |g| 0.57  44,115 tok/s  ETA 1.0 h
+[eval] step 900: val loss 5.2091, ppl 182.9, 1.732 bits/byte, word ppl 554.1 (2.5 s)
+step 937/20,000  tokens 7.7M  epoch 0.061  loss 5.2913  lr 9.99e-04  |g| 0.67  43,522 tok/s  ETA 1.0 h
+[eval] step 1,000: val loss 5.1034, ppl 164.6, 1.696 bits/byte, word ppl 487.4 (2.5 s)
+captured frame 2 at step 1,000 -> paper_study\frames\learned_s1\step_0001000
+step 1,000/20,000  tokens 8.2M  epoch 0.065  loss 5.2350  lr 9.99e-04  |g| 0.64  45,146 tok/s  ETA 1.0 h
+step 1,074/20,000  tokens 8.8M  epoch 0.070  loss 5.1504  lr 9.98e-04  |g| 0.59  45,324 tok/s  ETA 1.0 h
+[eval] step 1,100: val loss 5.0138, ppl 150.5, 1.667 bits/byte, word ppl 437.2 (2.5 s)
+step 1,135/20,000  tokens 9.3M  epoch 0.074  loss 5.0987  lr 9.98e-04  |g| 0.68  42,307 tok/s  ETA 1.0 h
+[eval] step 1,200: val loss 4.9514, ppl 141.4, 1.646 bits/byte, word ppl 405.4 (2.5 s)
+step 1,200/20,000  tokens 9.8M  epoch 0.078  loss 5.0530  lr 9.97e-04  |g| 0.69  45,376 tok/s  ETA 0.9 h
+step 1,275/20,000  tokens 10.4M  epoch 0.083  loss 4.9983  lr 9.97e-04  |g| 0.69  45,520 tok/s  ETA 0.9 h
+[eval] step 1,300: val loss 4.8833, ppl 132.1, 1.623 bits/byte, word ppl 373.2 (2.5 s)
+step 1,338/20,000  tokens 11.0M  epoch 0.087  loss 4.9503  lr 9.96e-04  |g| 0.62  45,096 tok/s  ETA 0.9 h
+[eval] step 1,400: val loss 4.8320, ppl 125.5, 1.606 bits/byte, word ppl 350.7 (2.5 s)
+step 1,400/20,000  tokens 11.5M  epoch 0.091  loss 4.9207  lr 9.95e-04  |g| 0.61  45,452 tok/s  ETA 0.9 h
+step 1,476/20,000  tokens 12.1M  epoch 0.096  loss 4.8618  lr 9.94e-04  |g| 0.66  44,123 tok/s  ETA 1.0 h
+[eval] step 1,500: val loss 4.7773, ppl 118.8, 1.588 bits/byte, word ppl 328.2 (2.5 s)
+captured frame 3 at step 1,500 -> paper_study\frames\learned_s1\step_0001500
+step 1,539/20,000  tokens 12.6M  epoch 0.100  loss 4.8471  lr 9.94e-04  |g| 0.64  45,816 tok/s  ETA 0.9 h
+[eval] step 1,600: val loss 4.7177, ppl 111.9, 1.568 bits/byte, word ppl 305.3 (2.5 s)
+step 1,600/20,000  tokens 13.1M  epoch 0.104  loss 4.8012  lr 9.93e-04  |g| 0.63  45,466 tok/s  ETA 0.9 h
+step 1,675/20,000  tokens 13.7M  epoch 0.109  loss 4.7798  lr 9.92e-04  |g| 0.64  45,360 tok/s  ETA 0.9 h
+[eval] step 1,700: val loss 4.6783, ppl 107.6, 1.555 bits/byte, word ppl 291.1 (2.5 s)
+step 1,738/20,000  tokens 14.2M  epoch 0.113  loss 4.7432  lr 9.91e-04  |g| 0.69  43,855 tok/s  ETA 0.9 h
+[eval] step 1,800: val loss 4.6445, ppl 104.0, 1.544 bits/byte, word ppl 279.4 (2.5 s)
+step 1,800/20,000  tokens 14.7M  epoch 0.117  loss 4.7158  lr 9.90e-04  |g| 0.66  45,361 tok/s  ETA 0.9 h
+step 1,876/20,000  tokens 15.4M  epoch 0.122  loss 4.6778  lr 9.89e-04  |g| 0.65  45,836 tok/s  ETA 0.9 h
+[eval] step 1,900: val loss 4.6017, ppl 99.7, 1.530 bits/byte, word ppl 265.3 (2.5 s)
+step 1,939/20,000  tokens 15.9M  epoch 0.126  loss 4.6735  lr 9.88e-04  |g| 0.68  44,734 tok/s  ETA 0.9 h
+[eval] step 2,000: val loss 4.5773, ppl 97.3, 1.522 bits/byte, word ppl 257.5 (2.5 s)
+captured frame 4 at step 2,000 -> paper_study\frames\learned_s1\step_0002000
+step 2,000/20,000  tokens 16.4M  epoch 0.130  loss 4.6681  lr 9.87e-04  |g| 0.71  45,023 tok/s  ETA 0.9 h
+step 2,075/20,000  tokens 17.0M  epoch 0.135  loss 4.6195  lr 9.86e-04  |g| 0.66  45,347 tok/s  ETA 0.9 h
+[eval] step 2,100: val loss 4.5461, ppl 94.3, 1.511 bits/byte, word ppl 248.0 (2.5 s)
+step 2,138/20,000  tokens 17.5M  epoch 0.139  loss 4.6027  lr 9.84e-04  |g| 0.68  45,158 tok/s  ETA 0.9 h
+[eval] step 2,200: val loss 4.5043, ppl 90.4, 1.497 bits/byte, word ppl 235.7 (2.5 s)
+step 2,200/20,000  tokens 18.0M  epoch 0.143  loss 4.5706  lr 9.83e-04  |g| 0.69  44,832 tok/s  ETA 0.9 h
+step 2,275/20,000  tokens 18.6M  epoch 0.148  loss 4.5540  lr 9.82e-04  |g| 0.74  44,211 tok/s  ETA 0.9 h
+[eval] step 2,300: val loss 4.4865, ppl 88.8, 1.491 bits/byte, word ppl 230.7 (2.5 s)
+step 2,337/20,000  tokens 19.1M  epoch 0.152  loss 4.5375  lr 9.80e-04  |g| 0.75  43,178 tok/s  ETA 0.9 h
+[eval] step 2,400: val loss 4.4717, ppl 87.5, 1.486 bits/byte, word ppl 226.6 (2.5 s)
+step 2,400/20,000  tokens 19.7M  epoch 0.156  loss 4.5370  lr 9.79e-04  |g| 0.73  44,920 tok/s  ETA 0.9 h
+step 2,475/20,000  tokens 20.3M  epoch 0.161  loss 4.5005  lr 9.77e-04  |g| 0.76  44,540 tok/s  ETA 0.9 h
+[eval] step 2,500: val loss 4.4250, ppl 83.5, 1.471 bits/byte, word ppl 214.1 (2.5 s)
+captured frame 5 at step 2,500 -> paper_study\frames\learned_s1\step_0002500
+autosaved paper_study\ckpt\learned_s1.pt at step 2,532
+step 2,535/20,000  tokens 20.8M  epoch 0.165  loss 4.4578  lr 9.76e-04  |g| 0.69  45,128 tok/s  ETA 0.9 h
+[eval] step 2,600: val loss 4.3992, ppl 81.4, 1.462 bits/byte, word ppl 207.5 (2.5 s)
+step 2,600/20,000  tokens 21.3M  epoch 0.169  loss 4.4527  lr 9.75e-04  |g| 0.79  44,605 tok/s  ETA 0.9 h
+step 2,675/20,000  tokens 21.9M  epoch 0.174  loss 4.4477  lr 9.73e-04  |g| 0.73  45,083 tok/s  ETA 0.9 h
+[eval] step 2,700: val loss 4.3679, ppl 78.9, 1.452 bits/byte, word ppl 199.8 (2.5 s)
+step 2,736/20,000  tokens 22.4M  epoch 0.178  loss 4.4061  lr 9.71e-04  |g| 0.69  38,504 tok/s  ETA 1.0 h
+[eval] step 2,800: val loss 4.3245, ppl 75.5, 1.438 bits/byte, word ppl 189.5 (2.5 s)
+step 2,800/20,000  tokens 22.9M  epoch 0.182  loss 4.3963  lr 9.69e-04  |g| 0.80  45,572 tok/s  ETA 0.9 h
+step 2,874/20,000  tokens 23.5M  epoch 0.187  loss 4.3993  lr 9.68e-04  |g| 0.74  44,979 tok/s  ETA 0.9 h
+[eval] step 2,900: val loss 4.3177, ppl 75.0, 1.435 bits/byte, word ppl 188.0 (2.5 s)
+step 2,935/20,000  tokens 24.0M  epoch 0.191  loss 4.3845  lr 9.66e-04  |g| 0.71  40,660 tok/s  ETA 1.0 h
+[eval] step 3,000: val loss 4.2822, ppl 72.4, 1.423 bits/byte, word ppl 180.0 (2.5 s)
+captured frame 6 at step 3,000 -> paper_study\frames\learned_s1\step_0003000
+step 3,000/20,000  tokens 24.6M  epoch 0.195  loss 4.3475  lr 9.64e-04  |g| 0.81  44,647 tok/s  ETA 0.9 h
+saved paper_study\ckpt\learned_s1.pt (step 3,000, 24.6M tokens); continue with --resume paper_study\ckpt\learned_s1.pt
+stopped (token budget): step 3,000, 24.6M tokens (0.195 epochs), 9.6 min training; val loss 4.2822 (ppl 72.4, 1.423 bpb)
+  export   0% building A_data_cards
+  export  20% building B_curves
+  export  40% building C_maps
+  export  60% building D_data_sheets
+  export  80% building E_dashboard_frames
+  export 100% done
+appendix: paper_study\appendix\learned_s1\README.md
+paper_study\ckpt\learned_s1.pt: step 3,000, 24.6M training tokens, 17.11M parameters; context 512, stride 256
+  validation loss 4.2325 nats/token · ppl 68.89 · 1.4069 bits/byte · word ppl 169.51 · top-1 29.26% · top-5 49.68% · ECE 0.0074 (263,950 tokens, 5.1 s)
+  test       loss 4.2194 nats/token · ppl 67.99 · 1.4243 bits/byte · word ppl 178.13 · top-1 29.70% · top-5 49.98% · ECE 0.0087 (301,623 tokens, 5.6 s)
+  references on validation: unigram 7.2869, bigram 5.0957 nats/token
+wrote paper_study\eval\learned_s1\summary.json
+model: 6 layers, 6 heads, d=384, context 512, 16.91M parameters (10.62M non-embedding) on cuda
+logs: paper_study\logs\rope_s2
+recording every 500 updates into paper_study\frames\rope_s2
+[eval] step 0: val loss 9.7602, ppl 17330.6, 3.244 bits/byte, word ppl 138235.2 (2.8 s)
+[eval] step 20: val loss 9.0790, ppl 8769.2, 3.018 bits/byte, word ppl 60509.6 (2.7 s)
+step 39/20,000  tokens 0.3M  epoch 0.003  loss 9.4005  lr 7.80e-05  |g| 1.76  42,057 tok/s  ETA 1.1 h
+[eval] step 40: val loss 8.5843, ppl 5347.0, 2.854 bits/byte, word ppl 33209.6 (2.7 s)
+[eval] step 60: val loss 7.8669, ppl 2609.4, 2.615 bits/byte, word ppl 13912.8 (2.7 s)
+[eval] step 80: val loss 7.2696, ppl 1436.0, 2.417 bits/byte, word ppl 6742.9 (2.7 s)
+step 80/20,000  tokens 0.7M  epoch 0.005  loss 8.5257  lr 1.60e-04  |g| 1.12  37,231 tok/s  ETA 1.2 h
+[eval] step 100: val loss 6.8812, ppl 973.8, 2.287 bits/byte, word ppl 4209.6 (2.6 s)
+step 139/20,000  tokens 1.1M  epoch 0.009  loss 7.2812  lr 2.78e-04  |g| 0.79  42,864 tok/s  ETA 1.1 h
+[eval] step 200: val loss 6.0755, ppl 435.1, 2.020 bits/byte, word ppl 1584.5 (2.7 s)
+step 200/20,000  tokens 1.6M  epoch 0.013  loss 6.5498  lr 4.00e-04  |g| 0.82  42,170 tok/s  ETA 1.1 h
+step 271/20,000  tokens 2.2M  epoch 0.018  loss 6.0931  lr 5.42e-04  |g| 0.85  37,612 tok/s  ETA 1.2 h
+[eval] step 300: val loss 5.7375, ppl 310.3, 1.907 bits/byte, word ppl 1051.7 (2.7 s)
+step 329/20,000  tokens 2.7M  epoch 0.021  loss 5.8730  lr 6.58e-04  |g| 0.96  43,238 tok/s  ETA 1.0 h
+[eval] step 400: val loss 5.5260, ppl 251.1, 1.837 bits/byte, word ppl 813.7 (2.6 s)
+step 400/20,000  tokens 3.3M  epoch 0.026  loss 5.6999  lr 8.00e-04  |g| 0.67  40,628 tok/s  ETA 1.1 h
+step 472/20,000  tokens 3.9M  epoch 0.031  loss 5.5430  lr 9.44e-04  |g| 0.67  42,497 tok/s  ETA 1.0 h
+[eval] step 500: val loss 5.3344, ppl 207.4, 1.773 bits/byte, word ppl 645.0 (2.7 s)
+captured frame 1 at step 500 -> paper_study\frames\rope_s2\step_0000500
+step 529/20,000  tokens 4.3M  epoch 0.034  loss 5.4459  lr 1.00e-03  |g| 0.66  43,406 tok/s  ETA 1.0 h
+[eval] step 600: val loss 5.1556, ppl 173.4, 1.714 bits/byte, word ppl 519.3 (2.7 s)
+step 600/20,000  tokens 4.9M  epoch 0.039  loss 5.3094  lr 1.00e-03  |g| 0.62  40,901 tok/s  ETA 1.1 h
+step 673/20,000  tokens 5.5M  epoch 0.044  loss 5.1938  lr 1.00e-03  |g| 0.60  43,274 tok/s  ETA 1.0 h
+[eval] step 700: val loss 5.0119, ppl 150.2, 1.666 bits/byte, word ppl 436.3 (2.6 s)
+step 731/20,000  tokens 6.0M  epoch 0.048  loss 5.1164  lr 1.00e-03  |g| 0.63  36,727 tok/s  ETA 1.2 h
+[eval] step 800: val loss 4.9031, ppl 134.7, 1.630 bits/byte, word ppl 382.3 (2.7 s)
+step 800/20,000  tokens 6.6M  epoch 0.052  loss 5.0295  lr 9.99e-04  |g| 0.66  38,903 tok/s  ETA 1.1 h
+step 873/20,000  tokens 7.2M  epoch 0.057  loss 4.9574  lr 9.99e-04  |g| 0.62  42,833 tok/s  ETA 1.0 h
+[eval] step 900: val loss 4.8031, ppl 121.9, 1.597 bits/byte, word ppl 338.6 (2.6 s)
+step 931/20,000  tokens 7.6M  epoch 0.061  loss 4.9028  lr 9.99e-04  |g| 0.61  35,601 tok/s  ETA 1.2 h
+[eval] step 1,000: val loss 4.7403, ppl 114.5, 1.576 bits/byte, word ppl 313.8 (2.6 s)
+captured frame 2 at step 1,000 -> paper_study\frames\rope_s2\step_0001000
+step 1,000/20,000  tokens 8.2M  epoch 0.065  loss 4.8455  lr 9.99e-04  |g| 0.65  42,238 tok/s  ETA 1.0 h
+step 1,073/20,000  tokens 8.8M  epoch 0.070  loss 4.7937  lr 9.98e-04  |g| 0.65  43,007 tok/s  ETA 1.0 h
+[eval] step 1,100: val loss 4.6696, ppl 106.7, 1.552 bits/byte, word ppl 288.0 (2.6 s)
+step 1,131/20,000  tokens 9.3M  epoch 0.074  loss 4.7329  lr 9.98e-04  |g| 0.61  35,520 tok/s  ETA 1.2 h
+[eval] step 1,200: val loss 4.5788, ppl 97.4, 1.522 bits/byte, word ppl 258.0 (2.7 s)
+step 1,200/20,000  tokens 9.8M  epoch 0.078  loss 4.6673  lr 9.97e-04  |g| 0.60  41,860 tok/s  ETA 1.0 h
+step 1,273/20,000  tokens 10.4M  epoch 0.083  loss 4.6357  lr 9.97e-04  |g| 0.67  43,174 tok/s  ETA 1.0 h
+[eval] step 1,300: val loss 4.5192, ppl 91.8, 1.502 bits/byte, word ppl 240.0 (2.7 s)
+step 1,330/20,000  tokens 10.9M  epoch 0.087  loss 4.5939  lr 9.96e-04  |g| 0.63  36,758 tok/s  ETA 1.2 h
+[eval] step 1,400: val loss 4.4592, ppl 86.4, 1.482 bits/byte, word ppl 223.2 (2.6 s)
+step 1,400/20,000  tokens 11.5M  epoch 0.091  loss 4.5498  lr 9.95e-04  |g| 0.63  41,839 tok/s  ETA 1.0 h
+step 1,472/20,000  tokens 12.1M  epoch 0.096  loss 4.5034  lr 9.95e-04  |g| 0.65  42,883 tok/s  ETA 1.0 h
+[eval] step 1,500: val loss 4.4046, ppl 81.8, 1.464 bits/byte, word ppl 208.9 (2.7 s)
+captured frame 3 at step 1,500 -> paper_study\frames\rope_s2\step_0001500
+step 1,529/20,000  tokens 12.5M  epoch 0.099  loss 4.4802  lr 9.94e-04  |g| 0.63  43,003 tok/s  ETA 1.0 h
+[eval] step 1,600: val loss 4.3668, ppl 78.8, 1.452 bits/byte, word ppl 199.5 (2.7 s)
+step 1,600/20,000  tokens 13.1M  epoch 0.104  loss 4.4286  lr 9.93e-04  |g| 0.59  40,872 tok/s  ETA 1.0 h
+step 1,672/20,000  tokens 13.7M  epoch 0.109  loss 4.4078  lr 9.92e-04  |g| 0.61  42,340 tok/s  ETA 1.0 h
+[eval] step 1,700: val loss 4.3216, ppl 75.3, 1.437 bits/byte, word ppl 188.9 (2.7 s)
+step 1,730/20,000  tokens 14.2M  epoch 0.113  loss 4.3749  lr 9.91e-04  |g| 0.61  37,036 tok/s  ETA 1.1 h
+[eval] step 1,800: val loss 4.2756, ppl 71.9, 1.421 bits/byte, word ppl 178.6 (2.7 s)
+step 1,800/20,000  tokens 14.7M  epoch 0.117  loss 4.3364  lr 9.90e-04  |g| 0.70  40,579 tok/s  ETA 1.0 h
+step 1,871/20,000  tokens 15.3M  epoch 0.122  loss 4.3338  lr 9.89e-04  |g| 0.62  37,772 tok/s  ETA 1.1 h
+[eval] step 1,900: val loss 4.2484, ppl 70.0, 1.412 bits/byte, word ppl 172.8 (2.7 s)
+step 1,928/20,000  tokens 15.8M  epoch 0.125  loss 4.3164  lr 9.88e-04  |g| 0.67  43,580 tok/s  ETA 0.9 h
+step 1,999/20,000  tokens 16.4M  epoch 0.130  loss 4.2928  lr 9.87e-04  |g| 0.65  42,430 tok/s  ETA 1.0 h
+[eval] step 2,000: val loss 4.2231, ppl 68.2, 1.404 bits/byte, word ppl 167.6 (2.7 s)
+captured frame 4 at step 2,000 -> paper_study\frames\rope_s2\step_0002000
+step 2,051/20,000  tokens 16.8M  epoch 0.133  loss 4.2826  lr 9.86e-04  |g| 0.60  39,504 tok/s  ETA 1.0 h
+[eval] step 2,100: val loss 4.2011, ppl 66.8, 1.397 bits/byte, word ppl 163.2 (2.7 s)
+step 2,110/20,000  tokens 17.3M  epoch 0.137  loss 4.2710  lr 9.85e-04  |g| 0.63  38,288 tok/s  ETA 1.1 h
+step 2,180/20,000  tokens 17.9M  epoch 0.142  loss 4.2567  lr 9.84e-04  |g| 0.62  35,984 tok/s  ETA 1.1 h
+[eval] step 2,200: val loss 4.1749, ppl 65.0, 1.388 bits/byte, word ppl 158.1 (2.7 s)
+step 2,238/20,000  tokens 18.3M  epoch 0.146  loss 4.2199  lr 9.82e-04  |g| 0.62  42,690 tok/s  ETA 0.9 h
+[eval] step 2,300: val loss 4.1502, ppl 63.4, 1.380 bits/byte, word ppl 153.4 (2.7 s)
+step 2,300/20,000  tokens 18.8M  epoch 0.150  loss 4.2056  lr 9.81e-04  |g| 0.64  40,387 tok/s  ETA 1.0 h
+step 2,372/20,000  tokens 19.4M  epoch 0.154  loss 4.1943  lr 9.80e-04  |g| 0.65  42,464 tok/s  ETA 0.9 h
+[eval] step 2,400: val loss 4.1429, ppl 63.0, 1.377 bits/byte, word ppl 152.1 (2.7 s)
+step 2,429/20,000  tokens 19.9M  epoch 0.158  loss 4.1862  lr 9.78e-04  |g| 0.63  42,773 tok/s  ETA 0.9 h
+autosaved paper_study\ckpt\rope_s2.pt at step 2,432
+step 2,499/20,000  tokens 20.5M  epoch 0.163  loss 4.1869  lr 9.77e-04  |g| 0.62  42,298 tok/s  ETA 0.9 h
+[eval] step 2,500: val loss 4.1111, ppl 61.0, 1.367 bits/byte, word ppl 146.3 (2.7 s)
+captured frame 5 at step 2,500 -> paper_study\frames\rope_s2\step_0002500
+step 2,554/20,000  tokens 20.9M  epoch 0.166  loss 4.1749  lr 9.76e-04  |g| 0.62  43,248 tok/s  ETA 0.9 h
+[eval] step 2,600: val loss 4.0965, ppl 60.1, 1.362 bits/byte, word ppl 143.7 (2.7 s)
+step 2,612/20,000  tokens 21.4M  epoch 0.170  loss 4.1569  lr 9.74e-04  |g| 0.66  42,608 tok/s  ETA 0.9 h
+step 2,683/20,000  tokens 22.0M  epoch 0.175  loss 4.1406  lr 9.72e-04  |g| 0.60  43,014 tok/s  ETA 0.9 h
+[eval] step 2,700: val loss 4.0711, ppl 58.6, 1.353 bits/byte, word ppl 139.4 (2.7 s)
+step 2,742/20,000  tokens 22.5M  epoch 0.178  loss 4.1439  lr 9.71e-04  |g| 0.65  42,431 tok/s  ETA 0.9 h
+[eval] step 2,800: val loss 4.0536, ppl 57.6, 1.347 bits/byte, word ppl 136.5 (2.7 s)
+step 2,800/20,000  tokens 22.9M  epoch 0.182  loss 4.1389  lr 9.69e-04  |g| 0.66  41,837 tok/s  ETA 0.9 h
+step 2,872/20,000  tokens 23.5M  epoch 0.187  loss 4.0981  lr 9.68e-04  |g| 0.63  42,508 tok/s  ETA 0.9 h
+[eval] step 2,900: val loss 4.0536, ppl 57.6, 1.347 bits/byte, word ppl 136.5 (2.6 s)
+step 2,930/20,000  tokens 24.0M  epoch 0.191  loss 4.0921  lr 9.66e-04  |g| 0.69  36,739 tok/s  ETA 1.1 h
+[eval] step 3,000: val loss 4.0481, ppl 57.3, 1.346 bits/byte, word ppl 135.5 (2.7 s)
+captured frame 6 at step 3,000 -> paper_study\frames\rope_s2\step_0003000
+step 3,000/20,000  tokens 24.6M  epoch 0.195  loss 4.0985  lr 9.64e-04  |g| 0.63  41,394 tok/s  ETA 0.9 h
+saved paper_study\ckpt\rope_s2.pt (step 3,000, 24.6M tokens); continue with --resume paper_study\ckpt\rope_s2.pt
+stopped (token budget): step 3,000, 24.6M tokens (0.195 epochs), 10.0 min training; val loss 4.0481 (ppl 57.3, 1.346 bpb)
+  export   0% building A_data_cards
+  export  20% building B_curves
+  export  40% building C_maps
+  export  60% building D_data_sheets
+  export  80% building E_dashboard_frames
+  export 100% done
+appendix: paper_study\appendix\rope_s2\README.md
+paper_study\ckpt\rope_s2.pt: step 3,000, 24.6M training tokens, 16.91M parameters; context 512, stride 256
+  validation loss 3.9753 nats/token · ppl 53.26 · 1.3214 bits/byte · word ppl 124.09 · top-1 32.57% · top-5 53.10% · ECE 0.0083 (263,950 tokens, 5.4 s)
+  test       loss 3.9492 nats/token · ppl 51.89 · 1.3331 bits/byte · word ppl 127.82 · top-1 33.35% · top-5 53.54% · ECE 0.0109 (301,623 tokens, 5.9 s)
+  references on validation: unigram 7.2869, bigram 5.0957 nats/token
+wrote paper_study\eval\rope_s2\summary.json
+model: 6 layers, 6 heads, d=384, context 512, 17.11M parameters (10.62M non-embedding) on cuda
+logs: paper_study\logs\learned_s2
+recording every 500 updates into paper_study\frames\learned_s2
+[eval] step 0: val loss 9.7576, ppl 17285.1, 3.244 bits/byte, word ppl 137795.0 (2.7 s)
+[eval] step 20: val loss 9.0605, ppl 8608.4, 3.012 bits/byte, word ppl 59166.4 (2.5 s)
+[eval] step 40: val loss 8.6009, ppl 5436.7, 2.859 bits/byte, word ppl 33886.7 (2.5 s)
+step 40/20,000  tokens 0.3M  epoch 0.003  loss 9.3760  lr 8.00e-05  |g| 1.76  44,815 tok/s  ETA 1.0 h
+[eval] step 60: val loss 7.8851, ppl 2657.4, 2.621 bits/byte, word ppl 14223.6 (2.5 s)
+[eval] step 80: val loss 7.3013, ppl 1482.2, 2.427 bits/byte, word ppl 7006.9 (2.5 s)
+step 91/20,000  tokens 0.7M  epoch 0.006  loss 8.2708  lr 1.82e-04  |g| 0.80  42,532 tok/s  ETA 1.1 h
+step 95/20,000  tokens 0.8M  epoch 0.006  loss 8.1760  lr 1.90e-04  |g| 0.67  223 tok/s  ETA 203.2 h
+[eval] step 100: val loss 6.9436, ppl 1036.5, 2.308 bits/byte, word ppl 4541.0 (2.8 s)
+step 154/20,000  tokens 1.3M  epoch 0.010  loss 7.1601  lr 3.08e-04  |g| 0.66  46,230 tok/s  ETA 1.0 h
+[eval] step 200: val loss 6.2672, ppl 527.0, 2.083 bits/byte, word ppl 1999.2 (2.5 s)
+step 218/20,000  tokens 1.8M  epoch 0.014  loss 6.5613  lr 4.36e-04  |g| 0.68  44,680 tok/s  ETA 1.0 h
+step 293/20,000  tokens 2.4M  epoch 0.019  loss 6.2264  lr 5.86e-04  |g| 0.72  44,596 tok/s  ETA 1.0 h
+[eval] step 300: val loss 5.9971, ppl 402.2, 1.994 bits/byte, word ppl 1440.8 (2.5 s)
+step 354/20,000  tokens 2.9M  epoch 0.023  loss 6.0671  lr 7.08e-04  |g| 0.66  45,255 tok/s  ETA 1.0 h
+[eval] step 400: val loss 5.8445, ppl 345.3, 1.943 bits/byte, word ppl 1197.3 (2.5 s)
+step 416/20,000  tokens 3.4M  epoch 0.027  loss 5.9632  lr 8.32e-04  |g| 0.56  40,825 tok/s  ETA 1.1 h
+step 492/20,000  tokens 4.0M  epoch 0.032  loss 5.8559  lr 9.84e-04  |g| 0.64  43,722 tok/s  ETA 1.0 h
+[eval] step 500: val loss 5.7119, ppl 302.4, 1.899 bits/byte, word ppl 1019.5 (2.5 s)
+captured frame 1 at step 500 -> paper_study\frames\learned_s2\step_0000500
+step 553/20,000  tokens 4.5M  epoch 0.036  loss 5.7748  lr 1.00e-03  |g| 0.81  45,690 tok/s  ETA 1.0 h
+[eval] step 600: val loss 5.5798, ppl 265.0, 1.855 bits/byte, word ppl 868.7 (2.5 s)
+step 616/20,000  tokens 5.0M  epoch 0.040  loss 5.6764  lr 1.00e-03  |g| 0.60  41,743 tok/s  ETA 1.1 h
+step 691/20,000  tokens 5.7M  epoch 0.045  loss 5.5906  lr 1.00e-03  |g| 0.57  38,261 tok/s  ETA 1.1 h
+[eval] step 700: val loss 5.4349, ppl 229.3, 1.807 bits/byte, word ppl 728.7 (2.5 s)
+step 754/20,000  tokens 6.2M  epoch 0.049  loss 5.4996  lr 1.00e-03  |g| 0.57  46,569 tok/s  ETA 0.9 h
+[eval] step 800: val loss 5.3180, ppl 204.0, 1.768 bits/byte, word ppl 632.3 (2.5 s)
+step 818/20,000  tokens 6.7M  epoch 0.053  loss 5.4115  lr 9.99e-04  |g| 0.58  44,635 tok/s  ETA 1.0 h
+step 893/20,000  tokens 7.3M  epoch 0.058  loss 5.3370  lr 9.99e-04  |g| 0.62  44,715 tok/s  ETA 1.0 h
+[eval] step 900: val loss 5.1996, ppl 181.2, 1.728 bits/byte, word ppl 547.8 (2.5 s)
+step 955/20,000  tokens 7.8M  epoch 0.062  loss 5.2878  lr 9.99e-04  |g| 0.64  40,446 tok/s  ETA 1.1 h
+[eval] step 1,000: val loss 5.1079, ppl 165.3, 1.698 bits/byte, word ppl 490.1 (2.5 s)
+captured frame 2 at step 1,000 -> paper_study\frames\learned_s2\step_0001000
+step 1,014/20,000  tokens 8.3M  epoch 0.066  loss 5.2174  lr 9.98e-04  |g| 0.61  45,411 tok/s  ETA 1.0 h
+step 1,089/20,000  tokens 8.9M  epoch 0.071  loss 5.1406  lr 9.98e-04  |g| 0.61  45,394 tok/s  ETA 0.9 h
+[eval] step 1,100: val loss 5.0299, ppl 152.9, 1.672 bits/byte, word ppl 445.9 (2.5 s)
+step 1,150/20,000  tokens 9.4M  epoch 0.075  loss 5.0777  lr 9.98e-04  |g| 0.61  45,390 tok/s  ETA 0.9 h
+[eval] step 1,200: val loss 4.9425, ppl 140.1, 1.643 bits/byte, word ppl 401.0 (2.5 s)
+step 1,213/20,000  tokens 9.9M  epoch 0.079  loss 5.0158  lr 9.97e-04  |g| 0.62  45,116 tok/s  ETA 0.9 h
+step 1,288/20,000  tokens 10.6M  epoch 0.084  loss 4.9861  lr 9.96e-04  |g| 0.65  44,886 tok/s  ETA 0.9 h
+[eval] step 1,300: val loss 4.8823, ppl 131.9, 1.623 bits/byte, word ppl 372.8 (2.5 s)
+step 1,350/20,000  tokens 11.1M  epoch 0.088  loss 4.9372  lr 9.96e-04  |g| 0.67  44,905 tok/s  ETA 0.9 h
+[eval] step 1,400: val loss 4.8290, ppl 125.1, 1.605 bits/byte, word ppl 349.4 (2.5 s)
+step 1,413/20,000  tokens 11.6M  epoch 0.092  loss 4.9156  lr 9.95e-04  |g| 0.65  44,932 tok/s  ETA 0.9 h
+step 1,488/20,000  tokens 12.2M  epoch 0.097  loss 4.8779  lr 9.94e-04  |g| 0.68  45,156 tok/s  ETA 0.9 h
+[eval] step 1,500: val loss 4.7745, ppl 118.5, 1.587 bits/byte, word ppl 327.1 (2.5 s)
+captured frame 3 at step 1,500 -> paper_study\frames\learned_s2\step_0001500
+step 1,550/20,000  tokens 12.7M  epoch 0.101  loss 4.8335  lr 9.94e-04  |g| 0.66  45,293 tok/s  ETA 0.9 h
+[eval] step 1,600: val loss 4.7303, ppl 113.3, 1.572 bits/byte, word ppl 310.0 (2.5 s)
+step 1,613/20,000  tokens 13.2M  epoch 0.105  loss 4.8029  lr 9.93e-04  |g| 0.62  45,000 tok/s  ETA 0.9 h
+step 1,688/20,000  tokens 13.8M  epoch 0.110  loss 4.7713  lr 9.92e-04  |g| 0.66  44,984 tok/s  ETA 0.9 h
+[eval] step 1,700: val loss 4.6964, ppl 109.5, 1.561 bits/byte, word ppl 297.5 (2.5 s)
+step 1,750/20,000  tokens 14.3M  epoch 0.114  loss 4.7260  lr 9.91e-04  |g| 0.65  45,595 tok/s  ETA 0.9 h
+[eval] step 1,800: val loss 4.6386, ppl 103.4, 1.542 bits/byte, word ppl 277.4 (2.5 s)
+step 1,813/20,000  tokens 14.9M  epoch 0.118  loss 4.7084  lr 9.90e-04  |g| 0.68  45,291 tok/s  ETA 0.9 h
+step 1,888/20,000  tokens 15.5M  epoch 0.123  loss 4.6930  lr 9.89e-04  |g| 0.69  44,786 tok/s  ETA 0.9 h
+[eval] step 1,900: val loss 4.6060, ppl 100.1, 1.531 bits/byte, word ppl 266.7 (2.5 s)
+step 1,950/20,000  tokens 16.0M  epoch 0.127  loss 4.6776  lr 9.88e-04  |g| 0.66  45,327 tok/s  ETA 0.9 h
+[eval] step 2,000: val loss 4.5811, ppl 97.6, 1.523 bits/byte, word ppl 258.7 (2.5 s)
+captured frame 4 at step 2,000 -> paper_study\frames\learned_s2\step_0002000
+step 2,010/20,000  tokens 16.5M  epoch 0.131  loss 4.6427  lr 9.87e-04  |g| 0.66  42,847 tok/s  ETA 1.0 h
+step 2,085/20,000  tokens 17.1M  epoch 0.136  loss 4.6117  lr 9.85e-04  |g| 0.74  43,389 tok/s  ETA 0.9 h
+[eval] step 2,100: val loss 4.5438, ppl 94.1, 1.510 bits/byte, word ppl 247.3 (2.5 s)
+step 2,149/20,000  tokens 17.6M  epoch 0.140  loss 4.6241  lr 9.84e-04  |g| 0.67  45,323 tok/s  ETA 0.9 h
+[eval] step 2,200: val loss 4.5149, ppl 91.4, 1.501 bits/byte, word ppl 238.8 (2.5 s)
+step 2,211/20,000  tokens 18.1M  epoch 0.144  loss 4.5801  lr 9.83e-04  |g| 0.75  37,583 tok/s  ETA 1.1 h
+step 2,286/20,000  tokens 18.7M  epoch 0.149  loss 4.5495  lr 9.82e-04  |g| 0.72  39,260 tok/s  ETA 1.0 h
+[eval] step 2,300: val loss 4.4753, ppl 87.8, 1.488 bits/byte, word ppl 227.6 (2.5 s)
+step 2,349/20,000  tokens 19.2M  epoch 0.153  loss 4.5344  lr 9.80e-04  |g| 0.69  45,204 tok/s  ETA 0.9 h
+[eval] step 2,400: val loss 4.4400, ppl 84.8, 1.476 bits/byte, word ppl 218.0 (2.5 s)
+step 2,411/20,000  tokens 19.8M  epoch 0.157  loss 4.5055  lr 9.79e-04  |g| 0.69  37,891 tok/s  ETA 1.1 h
+autosaved paper_study\ckpt\learned_s2.pt at step 2,421
+step 2,485/20,000  tokens 20.4M  epoch 0.162  loss 4.4955  lr 9.77e-04  |g| 0.73  43,606 tok/s  ETA 0.9 h
+[eval] step 2,500: val loss 4.3981, ppl 81.3, 1.462 bits/byte, word ppl 207.2 (2.5 s)
+captured frame 5 at step 2,500 -> paper_study\frames\learned_s2\step_0002500
+step 2,547/20,000  tokens 20.9M  epoch 0.166  loss 4.4581  lr 9.76e-04  |g| 0.72  43,215 tok/s  ETA 0.9 h
+[eval] step 2,600: val loss 4.3779, ppl 79.7, 1.455 bits/byte, word ppl 202.2 (2.5 s)
+step 2,608/20,000  tokens 21.4M  epoch 0.170  loss 4.4534  lr 9.74e-04  |g| 0.73  45,635 tok/s  ETA 0.9 h
+step 2,683/20,000  tokens 22.0M  epoch 0.175  loss 4.4146  lr 9.72e-04  |g| 0.72  45,990 tok/s  ETA 0.9 h
+[eval] step 2,700: val loss 4.3415, ppl 76.8, 1.443 bits/byte, word ppl 193.5 (2.5 s)
+step 2,746/20,000  tokens 22.5M  epoch 0.179  loss 4.4199  lr 9.71e-04  |g| 0.74  42,994 tok/s  ETA 0.9 h
+[eval] step 2,800: val loss 4.3050, ppl 74.1, 1.431 bits/byte, word ppl 185.1 (2.5 s)
+step 2,808/20,000  tokens 23.0M  epoch 0.183  loss 4.4005  lr 9.69e-04  |g| 0.76  45,894 tok/s  ETA 0.9 h
+step 2,882/20,000  tokens 23.6M  epoch 0.188  loss 4.3496  lr 9.67e-04  |g| 0.77  44,862 tok/s  ETA 0.9 h
+[eval] step 2,900: val loss 4.3079, ppl 74.3, 1.432 bits/byte, word ppl 185.7 (2.5 s)
+step 2,945/20,000  tokens 24.1M  epoch 0.192  loss 4.3434  lr 9.66e-04  |g| 0.73  45,113 tok/s  ETA 0.9 h
+[eval] step 3,000: val loss 4.2814, ppl 72.3, 1.423 bits/byte, word ppl 179.9 (2.5 s)
+captured frame 6 at step 3,000 -> paper_study\frames\learned_s2\step_0003000
+saved paper_study\ckpt\learned_s2.pt (step 3,000, 24.6M tokens); continue with --resume paper_study\ckpt\learned_s2.pt
+stopped (token budget): step 3,000, 24.6M tokens (0.195 epochs), 10.0 min training; val loss 4.2814 (ppl 72.3, 1.423 bpb)
+  export   0% building A_data_cards
+  export  20% building B_curves
+  export  40% building C_maps
+  export  60% building D_data_sheets
+  export  80% building E_dashboard_frames
+  export 100% done
+appendix: paper_study\appendix\learned_s2\README.md
+paper_study\ckpt\learned_s2.pt: step 3,000, 24.6M training tokens, 17.11M parameters; context 512, stride 256
+  validation loss 4.2278 nats/token · ppl 68.56 · 1.4054 bits/byte · word ppl 168.55 · top-1 29.34% · top-5 49.71% · ECE 0.0095 (263,950 tokens, 5.1 s)
+  test       loss 4.1991 nats/token · ppl 66.62 · 1.4174 bits/byte · word ppl 173.74 · top-1 30.12% · top-5 50.28% · ECE 0.0090 (301,623 tokens, 5.6 s)
+  references on validation: unigram 7.2869, bigram 5.0957 nats/token
+wrote paper_study\eval\learned_s2\summary.json

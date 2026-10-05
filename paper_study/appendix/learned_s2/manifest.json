@@ -1,0 +1,442 @@
+{
+  "created": "2026-10-05T13:38:34",
+  "seconds": 23.0,
+  "checkpoint": "paper_study\\ckpt\\learned_s2.pt",
+  "step": 3000,
+  "tokens": 24576000,
+  "dataset": "wikitext-103",
+  "data_fingerprint": "15ec0fd6ef24da743d6f24821a7914b360e94c17cdc044743ae2c832bb0d7964",
+  "model": {
+    "vocab_size": 16384,
+    "block_size": 512,
+    "n_layer": 6,
+    "n_head": 6,
+    "d_model": 384,
+    "mlp": "swiglu",
+    "mlp_hidden": 0,
+    "norm": "rms",
+    "pos": "learned",
+    "rope_base": 10000.0,
+    "dropout": 0.0,
+    "bias": false,
+    "tie_embeddings": true,
+    "norm_eps": 1e-05
+  },
+  "train": {
+    "dataset": "wikitext-103",
+    "data_dir": "C:\\Users\\godso\\Downloads\\transformer_lab_cuda_study\\tlab\\data",
+    "batch_size": 16,
+    "grad_accum": 1,
+    "max_steps": 20000,
+    "lr": 0.001,
+    "min_lr_ratio": 0.1,
+    "warmup_steps": 500,
+    "schedule": "cosine",
+    "decay_frac": 0.2,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "eps": 1e-08,
+    "grad_clip": 1.0,
+    "eval_interval": 100,
+    "eval_tokens": 0,
+    "probe_interval": 25,
+    "sample_interval": 1000,
+    "stats_interval": 10,
+    "seed": 2,
+    "device": "cuda",
+    "dtype": "float32"
+  },
+  "frames": [
+    500,
+    1000,
+    1500,
+    2000,
+    2500,
+    3000
+  ],
+  "options": {
+    "themes": [
+      "print"
+    ],
+    "width": "double",
+    "formats": [
+      "png",
+      "pdf"
+    ],
+    "sections": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ]
+  },
+  "items": [
+    {
+      "section": "A",
+      "id": "A1_run_card",
+      "title": "Run card",
+      "legend": "key numbers of the run at update 3,000: validation metrics over all validation tokens, training budget, model size and compute",
+      "kind": "figure",
+      "files": [
+        "A_data_cards\\A1_run_card_print.png",
+        "A_data_cards\\A1_run_card_print.pdf"
+      ]
+    },
+    {
+      "section": "A",
+      "id": "A2_model_card",
+      "title": "Model card",
+      "legend": "architecture, training, evaluation, intended use and limitations",
+      "kind": "document",
+      "files": [
+        "A_data_cards\\A2_model_card.md"
+      ]
+    },
+    {
+      "section": "A",
+      "id": "A3_data_card",
+      "title": "Data card",
+      "legend": "source, licence, composition, checksums and preprocessing of the corpus",
+      "kind": "document",
+      "files": [
+        "A_data_cards\\A3_data_card.md"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B1_loss",
+      "title": "Training and validation loss",
+      "legend": "validation loss fell from 9.76 to 4.28 nats/token (perplexity 17,285 to 72.3) over 24.6M training tokens; dashed lines: unigram (7.29) and interpolated bigram (5.10) models fitted on the training split",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B1_loss_print.png",
+        "B_curves\\B1_loss_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B2_learning_rate",
+      "title": "Learning-rate schedule",
+      "legend": "AdamW learning rate: linear warm-up over 500 updates, then cosine decay to 0.1\u00d7 the peak 0.001 over 20,000 updates; dot: update 3,000",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B2_learning_rate_print.png",
+        "B_curves\\B2_learning_rate_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B3_gradient_norm",
+      "title": "Gradient norm",
+      "legend": "global L2 norm of the gradient before clipping; clipped in 0% of the last 200 updates",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B3_gradient_norm_print.png",
+        "B_curves\\B3_gradient_norm_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B4_accuracy",
+      "title": "Next-token accuracy",
+      "legend": "share of validation tokens in the model's top 1 / top 5: 28.7% / 49.0%",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B4_accuracy_print.png",
+        "B_curves\\B4_accuracy_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B5_calibration",
+      "title": "Calibration",
+      "legend": "reliability diagram at update 3,000 (15 confidence bins); expected calibration error 0.0078",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B5_calibration_print.png",
+        "B_curves\\B5_calibration_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B7_frequency",
+      "title": "Loss by token frequency",
+      "legend": "validation loss of target tokens grouped by their training-frequency rank",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B7_frequency_print.png",
+        "B_curves\\B7_frequency_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B8_induction",
+      "title": "Induction heads over training",
+      "legend": "largest induction score per layer on repeated random sequences; latest maximum 0.121",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B8_induction_print.png",
+        "B_curves\\B8_induction_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B9_copying",
+      "title": "In-context copying",
+      "legend": "loss on random token sequences and on their exact repeat; latest 12.94 vs 12.00 nats",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B9_copying_print.png",
+        "B_curves\\B9_copying_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B6_loss_by_position",
+      "title": "Loss by context position",
+      "legend": "validation loss at each context position, averaged over windows, for 6 evaluations (colour: training tokens); in-context score (loss at token 500 minus token 50) +0.011",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B6_loss_by_position_print.png",
+        "B_curves\\B6_loss_by_position_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B0_strip_training_dynamics",
+      "title": "Training dynamics",
+      "legend": "(a) validation loss fell from 9.76 to 4.28 nats/token (perplexity 17,285 to 72.3) over 24.6M training tokens; dashed lines: unigram (7.29) and interpolated bigram (5.10) models fitted on the training split; (b) AdamW learning rate: linear warm-up over 500 updates, then cosine decay to 0.1\u00d7 the peak 0.001 over 20,000 updates; dot: update 3,000; (c) global L2 norm of the gradient before clipping; clipped in 0% of the last 200 updates.",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B0_strip_training_dynamics_print.png",
+        "B_curves\\B0_strip_training_dynamics_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B0_strip_evaluation",
+      "title": "Evaluation",
+      "legend": "(a) share of validation tokens in the model's top 1 / top 5: 28.7% / 49.0%; (b) reliability diagram at update 3,000 (15 confidence bins); expected calibration error 0.0078; (c) validation loss of target tokens grouped by their training-frequency rank.",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B0_strip_evaluation_print.png",
+        "B_curves\\B0_strip_evaluation_print.pdf"
+      ]
+    },
+    {
+      "section": "B",
+      "id": "B0_strip_mechanisms",
+      "title": "Mechanisms over training",
+      "legend": "(a) largest induction score per layer on repeated random sequences; latest maximum 0.121; (b) loss on random token sequences and on their exact repeat; latest 12.94 vs 12.00 nats.",
+      "kind": "figure",
+      "files": [
+        "B_curves\\B0_strip_mechanisms_print.png",
+        "B_curves\\B0_strip_mechanisms_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C1_attention_heads",
+      "title": "Attention of every head",
+      "legend": "attention probabilities softmax(QK\u1d40/\u221ad) of all 6 layers \u00d7 6 heads on the first 48 tokens of a validation passage at update 3,000 (rows: queries, columns: keys; square-root colour scale)",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C1_attention_heads_step0003000_print.png",
+        "C_maps\\C1_attention_heads_step0003000_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C2_head_scores",
+      "title": "Attention-head scores",
+      "legend": "(a) induction, (b) previous-token and (c) duplicate-token scores of every head, measured on 48 random tokens repeated twice; (d) mean attention entropy on the validation passage; update 3,000",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C2_head_scores_step0003000_print.png",
+        "C_maps\\C2_head_scores_step0003000_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C3_logit_lens",
+      "title": "Logit lens",
+      "legend": "each layer's residual stream decoded with the final norm and unembedding (nostalgebraist 2020) for the first 16 positions of the passage; colour: probability of the actual next token; text: the layer's top prediction; update 3,000",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C3_logit_lens_step0003000_print.png",
+        "C_maps\\C3_logit_lens_step0003000_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C4_layer_health",
+      "title": "Update size per weight matrix",
+      "legend": "relative update size \u2016\u0394W\u2016/\u2016W\u2016 of every weight matrix, measured every 10 updates over 300 measurements",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C4_layer_health_print.png",
+        "C_maps\\C4_layer_health_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C5_embeddings",
+      "title": "Token embeddings",
+      "legend": "all 16,384 token embeddings on the first two principal components of the frequency-weighted embedding distribution (31.5% and 5.2% of the variance); colour: training-frequency rank; labels: the most frequent tokens; update 3,000",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C5_embeddings_step0003000_print.png",
+        "C_maps\\C5_embeddings_step0003000_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C6_block_internals",
+      "title": "Inside block 6",
+      "legend": "activations of block 6 for the first 32 tokens (rows) at update 3,000: (a) residual stream entering the block, (b) after RMSNorm, (c) attention of head 6 (the block's strongest induction head), (d) attention-weighted values of all heads, (e) the 96 most active of 1,024 MLP hidden units, (f) residual stream leaving the block; diverging panels use each panel's own symmetric scale",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C6_block6_internals_step0003000_print.png",
+        "C_maps\\C6_block6_internals_step0003000_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C7_timelapse_attention",
+      "title": "Layer 6, head 6 across training",
+      "legend": "attention pattern of layer 6, head 6 (the strongest induction head at the last capture) on the same validation passage at updates 500, 1,000, 1,500, 2,000, 2,500, 3,000; one colour scale for all panels",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C7_timelapse_attention_L6H6_print.png",
+        "C_maps\\C7_timelapse_attention_L6H6_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C8_timelapse_induction",
+      "title": "Induction scores across training",
+      "legend": "induction score of every head at updates 500, 1,000, 1,500, 2,000, 2,500, 3,000; shared colour scale 0\u20130.30",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C8_timelapse_induction_scores_print.png",
+        "C_maps\\C8_timelapse_induction_scores_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C9_timelapse_logit_lens",
+      "title": "Logit lens across training",
+      "legend": "probability of the actual next token decoded from every layer for the first 16 positions of the same passage at updates 500, 1,000, 1,500, 2,000, 2,500, 3,000; shared colour scale",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C9_timelapse_logit_lens_print.png",
+        "C_maps\\C9_timelapse_logit_lens_print.pdf"
+      ]
+    },
+    {
+      "section": "C",
+      "id": "C10_timelapse_embeddings",
+      "title": "Token embeddings across training",
+      "legend": "all token embeddings on each capture's first two frequency-weighted principal components at updates 500, 1,000, 1,500, 2,000, 2,500, 3,000; axis signs aligned between captures, shared limits; colour: training-frequency rank (blue rare, red frequent)",
+      "kind": "figure",
+      "files": [
+        "C_maps\\C10_timelapse_embeddings_print.png",
+        "C_maps\\C10_timelapse_embeddings_print.pdf"
+      ]
+    },
+    {
+      "section": "D",
+      "id": "D1_corpus",
+      "title": "Corpus statistics",
+      "legend": "rows, words (whitespace words plus one end-of-line per line, the WikiText convention), UTF-8 megabytes, BPE tokens and bytes per token of every split",
+      "kind": "table",
+      "files": [
+        "D_data_sheets\\D1_corpus.csv",
+        "D_data_sheets\\D1_corpus.md",
+        "D_data_sheets\\D1_corpus_print.png",
+        "D_data_sheets\\D1_corpus_print.pdf"
+      ]
+    },
+    {
+      "section": "D",
+      "id": "D2_reference_models",
+      "title": "Reference models",
+      "legend": "validation cross-entropy of reference models fitted on the training split and of this transformer",
+      "kind": "table",
+      "files": [
+        "D_data_sheets\\D2_reference_models.csv",
+        "D_data_sheets\\D2_reference_models.md",
+        "D_data_sheets\\D2_reference_models_print.png",
+        "D_data_sheets\\D2_reference_models_print.pdf"
+      ]
+    },
+    {
+      "section": "D",
+      "id": "D3_validation_metrics",
+      "title": "Validation metrics",
+      "legend": "every validation pass (35): loss, perplexity, bits per byte, word-normalized perplexity, top-1 / top-5 accuracy and expected calibration error, each over all validation target tokens",
+      "kind": "table",
+      "files": [
+        "D_data_sheets\\D3_validation_metrics.csv",
+        "D_data_sheets\\D3_validation_metrics.md",
+        "D_data_sheets\\D3_validation_metrics_print.png",
+        "D_data_sheets\\D3_validation_metrics_print.pdf"
+      ]
+    },
+    {
+      "section": "D",
+      "id": "D4_parameters",
+      "title": "Parameters",
+      "legend": "parameter counts by component (tied input/output embedding counted once); per-tensor shapes in the CSV",
+      "kind": "table",
+      "files": [
+        "D_data_sheets\\D4_parameters.csv",
+        "D_data_sheets\\D4_parameters.md",
+        "D_data_sheets\\D4_parameters_print.png",
+        "D_data_sheets\\D4_parameters_print.pdf",
+        "D_data_sheets\\D4_parameters_by_tensor.csv"
+      ]
+    },
+    {
+      "section": "D",
+      "id": "D5_head_scores",
+      "title": "Head scores",
+      "legend": "every head's induction, previous-token and duplicate-token score and attention entropy at update 3,000, sorted by induction score (top 12 typeset; all in the CSV)",
+      "kind": "table",
+      "files": [
+        "D_data_sheets\\D5_head_scores.csv",
+        "D_data_sheets\\D5_head_scores.md",
+        "D_data_sheets\\D5_head_scores_print.png",
+        "D_data_sheets\\D5_head_scores_print.pdf"
+      ]
+    },
+    {
+      "section": "D",
+      "id": "D6_hyperparameters",
+      "title": "Hyperparameters",
+      "legend": "model architecture and training configuration",
+      "kind": "table",
+      "files": [
+        "D_data_sheets\\D6_hyperparameters.csv",
+        "D_data_sheets\\D6_hyperparameters.md",
+        "D_data_sheets\\D6_hyperparameters_print.png",
+        "D_data_sheets\\D6_hyperparameters_print.pdf"
+      ]
+    },
+    {
+      "section": "D",
+      "id": "D7_frames",
+      "title": "Frames",
+      "legend": "capture steps used for the maps and time-lapse strips",
+      "kind": "table",
+      "files": [
+        "D_data_sheets\\D7_frames.csv",
+        "D_data_sheets\\D7_frames.md",
+        "D_data_sheets\\D7_frames_print.png",
+        "D_data_sheets\\D7_frames_print.pdf"
+      ]
+    }
+  ]
+}
