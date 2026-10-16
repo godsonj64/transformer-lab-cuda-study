@@ -40,6 +40,19 @@ When all runs finish, the script writes **`paper_study\results_<computer>_<time>
 
 Copy that zip to the Mac (USB drive, AirDrop from a phone, cloud drive…), put it in `Mazr2/transformer_project/paper_study/` for analysis.
 
+## 3. Matched-initialization runs to 6,000 updates (revision)
+
+In the first study the learned position table was drawn from the random generator before the other weights, so at the same seed the learned model's other initial weights differed from the RoPE model's. The training program now draws the table last (`--pos-init last`), so all other initial weights are identical. The RoPE initialization does not change.
+
+Double-click **`paper_study\run_matched_windows.bat`**. It:
+
+- retrains the three learned-position runs from scratch to 6,000 updates (about 40 min each);
+- continues the three RoPE runs from update 3,000 to 6,000 if `paper_study\ckpt\rope_s*.pt` still holds the optimizer state (about 20 min each, it prints `continuing`). Otherwise it retrains them from scratch, with the same initial weights as before (about 40 min each). A fresh clone of this repository holds only slim checkpoints, so there the RoPE runs are retrained;
+- evaluates each run once on validation and test;
+- writes **`paper_study\matched6000_<computer>_<time>.zip`** (about 70 MB per run).
+
+Everything goes to `paper_study\matched6000\`; the original runs are not touched. In an existing copy of this folder, update the code first with `git pull` (or download the changed files from GitHub). Stop and resume work as in step 2. Copy the zip to the Mac into `Mazr2/transformer_project/paper_study/`.
+
 ## Do not change these
 
 - Keep `--dtype float32` (the default here), so that the CUDA runs can be compared with the Mac's float32 seed-0 pair.
@@ -56,4 +69,4 @@ Copy that zip to the Mac (USB drive, AirDrop from a phone, cloud drive…), put 
 | `pip` fails for one package | Setup retries with the newest versions automatically. If it still fails, save the full error text and check the package versions in `paper_study\requirements-windows.txt` |
 | Window closes immediately | Open *Command Prompt*, `cd C:\tlab`, run `paper_study\setup_windows.bat` (or `run_windows.bat`) to see the message |
 
-Files: `paper_study\run_study.py` (runner), `paper_study\check_gpu.py` (GPU check and benchmark), `paper_study\pack_results.py` (results zip), `gpt_lab.py` (training program), `README.md` (the Transformer Lab manual).
+Files: `paper_study\run_study.py` (runner), `paper_study\run_matched.py` (matched-initialization runs), `paper_study\check_gpu.py` (GPU check and benchmark), `paper_study\pack_results.py` (results zip), `gpt_lab.py` (training program), `README.md` (the Transformer Lab manual).

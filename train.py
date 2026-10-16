@@ -631,6 +631,7 @@ def load_checkpoint(path: str) -> dict:
         raise ValueError(f"{path} is not a readable checkpoint ({type(e).__name__}: {e})") from e
     if not isinstance(ck, dict) or ck.get("format") != CHECKPOINT_FORMAT:
         raise ValueError(f"{path} is not a transformer_lab checkpoint")
+    ck["model_config"].setdefault("pos_init", "inline")     # saved before pos_init existed
     return ck
 
 

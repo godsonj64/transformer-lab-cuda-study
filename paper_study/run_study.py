@@ -33,6 +33,22 @@ def run(cmd: list[str], log_path: str) -> int:
         return p.wait()
 
 
+def check_cuda() -> bool:
+    import torch
+    if not torch.cuda.is_available():
+        print("CUDA is not available to this PyTorch. Run setup_windows.bat first (see README_WINDOWS.md).")
+        return False
+    name = torch.cuda.get_device_name(0)
+    cap = torch.cuda.get_device_capability(0)
+    arch = f"sm_{cap[0]}{cap[1]}"
+    print(f"GPU: {name} ({arch}); torch {torch.__version__}, CUDA {torch.version.cuda}")
+    if arch not in torch.cuda.get_arch_list():
+        print(f"This PyTorch build has no kernels for {arch} ({torch.cuda.get_arch_list()}). "
+              "RTX 50-series GPUs need a CUDA 12.8+ build; rerun setup_windows.bat.")
+        return False
+    return True
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
@@ -44,19 +60,8 @@ def main() -> int:
     ap.add_argument("--no-eval", action="store_true", help="skip the final validation/test evaluation")
     a = ap.parse_args()
 
-    if a.device == "cuda":
-        import torch
-        if not torch.cuda.is_available():
-            print("CUDA is not available to this PyTorch. Run setup_windows.bat first (see README_WINDOWS.md).")
-            return 2
-        name = torch.cuda.get_device_name(0)
-        cap = torch.cuda.get_device_capability(0)
-        arch = f"sm_{cap[0]}{cap[1]}"
-        print(f"GPU: {name} ({arch}); torch {torch.__version__}, CUDA {torch.version.cuda}")
-        if arch not in torch.cuda.get_arch_list():
-            print(f"This PyTorch build has no kernels for {arch} ({torch.cuda.get_arch_list()}). "
-                  "RTX 50-series GPUs need a CUDA 12.8+ build; rerun setup_windows.bat.")
-            return 2
+    if a.device == "cuda" and not check_cuda():
+        return 2
 
     py = sys.executable
     for d in ("ckpt", "logs", "frames", "appendix", "eval"):

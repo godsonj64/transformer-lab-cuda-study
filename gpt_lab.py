@@ -31,7 +31,8 @@ DEFAULT_SAVE = os.path.join(HERE, "gpt_wikitext.pt")
 DEFAULT_DATA = os.path.join(HERE, "data")
 DEFAULT_RUNS = os.path.join(HERE, "runs")
 MODEL_FLAGS = {"n_layer": "n_layer", "n_head": "n_head", "d_model": "d_model", "block_size": "block_size",
-               "mlp": "mlp", "norm": "norm", "pos": "pos", "dropout": "dropout", "mlp_hidden": "mlp_hidden"}
+               "mlp": "mlp", "norm": "norm", "pos": "pos", "pos_init": "pos_init", "dropout": "dropout",
+               "mlp_hidden": "mlp_hidden"}
 TRAIN_FLAGS = ("batch_size", "grad_accum", "max_steps", "lr", "min_lr_ratio", "warmup_steps", "schedule",
                "decay_frac", "weight_decay", "grad_clip", "eval_interval", "eval_tokens", "probe_interval",
                "sample_interval", "seed", "device", "dtype")
@@ -64,6 +65,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     g.add_argument("--mlp-hidden", type=int, default=None, help="MLP width (0 = 8/3 d for SwiGLU, 4 d for GELU)")
     g.add_argument("--norm", choices=("rms", "layer"), default=None, help=f"default {m.norm}")
     g.add_argument("--pos", choices=("rope", "learned"), default=None, help=f"default {m.pos}")
+    g.add_argument("--pos-init", choices=("last", "inline"), default=None,
+                   help=f"learned position table drawn after all other weights (last: other weights match "
+                        f"the RoPE model at the same seed) or in module order (inline) (default {m.pos_init})")
     g.add_argument("--dropout", type=float, default=None, help=f"default {m.dropout}")
     g = p.add_argument_group("training (explicit flags override a resumed run's settings)")
     g.add_argument("--batch-size", type=_positive_int, default=None, help=f"sequences per micro-batch ({t.batch_size})")

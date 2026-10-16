@@ -44,6 +44,7 @@ class GPTConfig:
     mlp_hidden: int = 0              # 0: 8/3 d rounded up to 64 (swiglu) or 4 d (gelu)
     norm: str = "rms"                # rms | layer
     pos: str = "rope"                # rope | learned
+    pos_init: str = "last"           # last | inline: when the learned position table is drawn (see GPT)
     rope_base: float = 10000.0
     dropout: float = 0.0
     bias: bool = False
@@ -57,6 +58,8 @@ class GPTConfig:
             raise ValueError("RoPE needs an even head dimension")
         if self.mlp not in ("swiglu", "gelu") or self.norm not in ("rms", "layer") or self.pos not in ("rope", "learned"):
             raise ValueError("mlp must be swiglu|gelu, norm rms|layer, pos rope|learned")
+        if self.pos_init not in ("last", "inline"):
+            raise ValueError("pos_init must be last|inline")
         if min(self.vocab_size, self.block_size, self.n_layer, self.n_head, self.d_model) < 1:
             raise ValueError("sizes must be positive")
         if not 0.0 <= self.dropout < 1.0:
@@ -252,12 +255,23 @@ CAPTURE_KEYS = ("attn", "q", "k", "v", "heads", "attn_out", "ln1", "ln2", "mlp_p
 
 
 class GPT(nn.Module):
+    """pos_init="last" draws the learned position table after every other weight, so at a
+    given seed all other initial weights are bit-identical to those of the RoPE model.
+    "inline" draws it in module order, between the token embedding and the first block,
+    which shifts every later draw (the order used by the first paper study)."""
+
     def __init__(self, cfg: GPTConfig):
         super().__init__()
         cfg.validate()
         self.cfg = cfg
         self.wte = nn.Embedding(cfg.vocab_size, cfg.d_model)
-        self.wpe = nn.Embedding(cfg.block_size, cfg.d_model) if cfg.pos == "learned" else None
+        late = cfg.pos == "learned" and cfg.pos_init == "last"
+        if cfg.pos != "learned":
+            self.wpe = None
+        elif late:                        # no random draw here: initialised at the end
+            self.wpe = nn.Embedding(cfg.block_size, cfg.d_model, _weight=torch.empty(cfg.block_size, cfg.d_model))
+        else:
+            self.wpe = nn.Embedding(cfg.block_size, cfg.d_model)
         self.drop = nn.Dropout(cfg.dropout)
         self.blocks = nn.ModuleList([Block(cfg, i) for i in range(cfg.n_layer)])
         self.ln_f = make_norm(cfg)
@@ -270,11 +284,13 @@ class GPT(nn.Module):
             self.register_buffer("rope_sin", sin, persistent=False)
         else:
             self.rope_cos = self.rope_sin = None
-        self.apply(self._init)
+        self.apply(lambda m: None if late and m is self.wpe else self._init(m))
         resid_std = 0.02 / math.sqrt(2 * cfg.n_layer)
         for m in self.modules():
             if isinstance(m, nn.Linear) and getattr(m, "is_residual_out", False):
                 nn.init.normal_(m.weight, 0.0, resid_std)
+        if late:
+            nn.init.normal_(self.wpe.weight, 0.0, 0.02)
 
     @staticmethod
     def _init(m: nn.Module) -> None:

@@ -4,3 +4,5 @@ Transformer Lab - CUDA study package
 2. Double-click paper_study\setup_windows.bat (once)
 3. Double-click paper_study\run_windows.bat
 4. Bring paper_study\results_*.zip back to the Mac
+5. Revision: double-click paper_study\run_matched_windows.bat
+   (matched-initialization runs to 6,000 updates; see README_WINDOWS.md, section 3)
